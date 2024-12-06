@@ -6,4 +6,32 @@ h1{
     text-align:center;
     color:plum;
 }
+.project img{
+    width: 300px;
+    height: 300px;
+    margin: 10px;
+    border: 2px solid rgba(188, 109, 238, 0.8); /* choose a color */
+    display: block;
+    margin: auto;
+    }
+    about{
+        display:flex;
+        flex-wrap:wrap;
+        margin-right: 100px;
+        margin-left: 100px;
+        justify-content: center;
+        }
+        .about p {
+        width:50%;
+        text-align: center;
+        margin: auto;
+        line-height: 125%;
+        }
+        .about img {
+        width: 150px;
+        height: 200px;
+        border-radius: 25%;
+        border: 2px solid rgb(242, 9, 176);
+        }
+
 
