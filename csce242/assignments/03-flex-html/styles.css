@@ -9,18 +9,14 @@ body {
     font-family: Arial, sans-serif;
 }
 
-/* =========================
-   HEADER
-   ========================= */
+/* HEADER */
 header {
     padding: 30px;
     text-align: center;
     color: #5d8a8e;
 }
 
-/* =========================
-   NAVIGATION
-   ========================= */
+/* NAV */
 nav ul {
     list-style: none;
     display: flex;
@@ -28,9 +24,9 @@ nav ul {
 }
 
 nav li {
+    flex: 1;
     background: #e08b8b;
     border-bottom: 2px solid #b9d7d5;
-    flex: 1;
 }
 
 nav a {
@@ -41,9 +37,7 @@ nav a {
     text-decoration: none;
 }
 
-/* =========================
-   TOP CONTENT
-   ========================= */
+/* TOP SECTION */
 #top {
     padding: 30px;
 }
@@ -54,9 +48,7 @@ aside {
     margin-bottom: 30px;
 }
 
-/* =========================
-   CARDS
-   ========================= */
+/* CARDS */
 #cards {
     display: flex;
     flex-direction: column;
@@ -65,12 +57,12 @@ aside {
 
 #cards article {
     display: flex;
-    flex-direction: column;   /* STACK title over image */
+    flex-direction: column;
     align-items: center;
     width: 200px;
 }
 
-#cards article h3 {
+#cards h3 {
     background: #5d8a8e;
     color: white;
     padding: 10px;
@@ -79,15 +71,7 @@ aside {
     margin-bottom: 10px;
 }
 
-.block {
-    width: 200px;
-    height: 300px;
-    background: #b3b3d8;
-}
-
-/* =========================
-   IDEA SECTIONS
-   ========================= */
+/* IDEAS */
 .idea {
     display: flex;
     align-items: center;
@@ -102,14 +86,12 @@ aside {
     color: #333;
 }
 
-.idea .block {
+.idea img {
     width: 200px;
     height: 200px;
 }
 
-/* =========================
-   FOOTER
-   ========================= */
+/* FOOTER */
 footer {
     background: #e08b8b;
     color: white;
@@ -117,9 +99,7 @@ footer {
     padding: 20px;
 }
 
-/* =========================
-   LARGE SCREEN LAYOUT
-   ========================= */
+/* DESKTOP */
 @media (min-width: 900px) {
 
     nav ul {
