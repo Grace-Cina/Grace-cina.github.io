@@ -79,6 +79,9 @@ aside {
     padding: 30px;
     background: #5d8a8e;
     color: white;
+
+    /*  THIS IS THE FIX */
+    justify-content: flex-start;
 }
 
 .idea.light {
@@ -86,9 +89,16 @@ aside {
     color: #333;
 }
 
+/* Lock image size so it never creates phantom space */
 .idea img {
     width: 200px;
     height: 200px;
+    flex-shrink: 0;
+}
+
+/* Prevent text from stretching across the whole screen */
+.idea article {
+    max-width: 600px;
 }
 
 /* FOOTER */
