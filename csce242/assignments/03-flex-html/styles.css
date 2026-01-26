@@ -107,7 +107,7 @@ footer {
 
     #top {
         display: flex;
-        gap: 40px;
+        gap: 20px;
         align-items: flex-start;
     }
 
@@ -120,7 +120,6 @@ footer {
         flex: 3;
         display: flex;
         flex-direction: row;
-        justify-content: space-between;
         gap: 20px;
     }
 
