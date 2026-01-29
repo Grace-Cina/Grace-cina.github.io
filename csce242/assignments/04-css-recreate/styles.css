@@ -37,10 +37,12 @@ body {
 }
 
 .nav-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 20px;
 }
 
 .logo a {
@@ -55,6 +57,7 @@ body {
   text-decoration: none;
   margin-left: 20px;
   font-size: 16px;
+  font-weight: 600;
 }
 
 /* HERO */
@@ -70,15 +73,15 @@ body {
 
 .hero-text {
   position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
+  bottom: 60px;
+  left: 60px;
+  max-width: 500px;
   color: #ffffff;
-  text-align: center;
+  text-align: left;
 }
 
 .hero-text h1 {
-  font-size: 48px;
+  font-size: 42px;
   margin-bottom: 10px;
 }
 
@@ -87,7 +90,7 @@ body {
   display: flex;
   justify-content: space-around;
   background-color: #f2f2f2;
-  padding: 40px 20px;
+  padding: 40px 10%;
 }
 
 .info-item {
