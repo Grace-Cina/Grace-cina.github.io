@@ -7,12 +7,18 @@ body {
 .top-bar {
   background-color: #000000;
   padding: 8px 20px;
+ display: flex;
+  align-items: center;
+  justify-content: flex-start;
 }
 
-.top-bar a {
-  color: #ffffff;
-  text-decoration: none;
-  font-size: 14px;
+.top-bar img {
+  max-height:60px;
+  width:auto;
+
+
+  
+  
 }
 
 /* MAIN NAV */
