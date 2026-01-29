@@ -1,0 +1,154 @@
+:root {
+  --garnet: #73000a;
+  --black: #000000;
+  --dark-gray: #333333;
+  --light-gray: #f2f2f2;
+  --white: #ffffff;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  color: var(--dark-gray);
+  line-height: 1.6;
+}
+
+/* NAVBAR */
+.navbar {
+  background-color: var(--garnet);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+.nav-container {
+  max-width: 1200px;
+  margin: auto;
+  padding: 1rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  color: var(--white);
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 1.1rem;
+}
+
+.nav-links a {
+  color: var(--white);
+  margin-left: 1rem;
+  text-decoration: none;
+  font-size: 0.9rem;
+}
+
+/* HERO */
+.hero {
+  position: relative;
+}
+
+.hero img {
+  width: 100%;
+  display: block;
+}
+
+.hero-text {
+  position: absolute;
+  bottom: 20%;
+  left: 10%;
+  color: var(--white);
+  max-width: 500px;
+}
+
+.hero-text h1 {
+  font-size: 2.5rem;
+}
+
+/* CONTENT */
+.content {
+  max-width: 1200px;
+  margin: 3rem auto;
+  padding: 1rem;
+  display: flex;
+  gap: 2rem;
+  align-items: center;
+}
+
+.content-text,
+.content-image {
+  flex: 1;
+}
+
+.content-image img {
+  width: 100%;
+}
+
+.btn {
+  display: inline-block;
+  margin-top: 1rem;
+  padding: 0.5rem 1rem;
+  background-color: var(--garnet);
+  color: var(--white);
+  text-decoration: none;
+}
+
+/* CARDS */
+.cards {
+  background-color: var(--light-gray);
+  padding: 3rem 1rem;
+  display: flex;
+  gap: 2rem;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.card {
+  background-color: var(--white);
+  max-width: 350px;
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+}
+
+.card img {
+  width: 100%;
+}
+
+.card h3 {
+  margin: 1rem 0 0.5rem;
+}
+
+.card a {
+  margin-top: auto;
+  color: var(--garnet);
+  text-decoration: none;
+  font-weight: bold;
+}
+
+/* FOOTER */
+.footer {
+  background-color: var(--black);
+  color: var(--white);
+  text-align: center;
+  padding: 1rem;
+}
+
+/* SMALL SCREENS */
+@media (max-width: 768px) {
+  .content {
+    flex-direction: column;
+  }
+
+  .hero-text {
+    position: static;
+    background-color: var(--garnet);
+    padding: 1rem;
+  }
+}
