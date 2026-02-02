@@ -1,104 +1,124 @@
+/* Reset */
 body {
   margin: 0;
-  font-family: Arial, sans-serif;
+  font-family: Arial, Helvetica, sans-serif;
 }
 
-/* TOP BAR */
-.top-bar {
+/* Utility Bar */
+.utility-bar {
   background: black;
-  color: white;
   padding: 8px 16px;
-  font-size: 12px;
 }
 
-.top-bar span {
+.utility-bar a {
+  color: white;
   margin-right: 12px;
+  font-size: 14px;
+  text-decoration: none;
 }
 
-/* HEADER */
+/* Header */
 .header {
   background: black;
   color: white;
-  padding: 16px;
+  padding: 20px 16px;
 }
 
-.header h1 {
-  margin: 0;
+/* Navigation */
+.main-nav {
+  background: #73000a;
+  padding: 12px 16px;
 }
 
-.nav {
-  margin-top: 8px;
-}
-
-.nav span {
+.main-nav a {
+  color: white;
   margin-right: 16px;
+  text-decoration: none;
+  font-weight: bold;
 }
 
-/* HERO */
+/* Hero */
 .hero {
   position: relative;
+  height: 400px;
 }
 
 .hero img {
   width: 100%;
-  display: block;
+  height: 100%;
+  object-fit: cover;
 }
 
 .hero-box {
-  position: absolute;
-  right: 10%;
-  top: 50%;
-  transform: translateY(-50%);
   background: #73000a;
   color: white;
   padding: 20px;
   width: 280px;
+  position: absolute;
+  top: 40px;
+  right: 20px;
 }
 
-.hero-box button {
-  margin-top: 10px;
-  padding: 8px;
-  background: none;
+.hero-box .button {
+  display: inline-block;
+  margin-top: 12px;
+  padding: 10px 14px;
   border: 2px solid white;
   color: white;
+  text-decoration: none;
 }
 
-/* QUOTE */
+/* Quote */
 .quote {
   display: flex;
   align-items: center;
-  gap: 20px;
-  padding: 40px;
+  gap: 16px;
+  padding: 32px 16px;
+  background: #f2f2f2;
 }
 
-.quote img {
-  border-radius: 50%;
-}
-
-/* CARDS */
+/* Cards */
 .cards {
-  display: flex;
-  gap: 20px;
-  padding: 40px;
+  padding: 32px 16px;
 }
 
 .card {
-  background: #f2f2f2;
+  background: white;
   padding: 16px;
-  width: 100%;
+  margin-bottom: 24px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.15);
 }
 
 .card img {
   width: 100%;
 }
 
-/* FOOTER */
+.card h3 {
+  color: #73000a;
+}
+
+/* Footer */
 .footer {
   background: #73000a;
   color: white;
   text-align: center;
   padding: 20px;
 }
+
+/* -------- DESKTOP -------- */
+@media (min-width: 768px) {
+
+  .cards {
+    display: flex;
+    gap: 24px;
+  }
+
+  .card {
+    margin-bottom: 0;
+  }
+
+}
+
 
 
 
