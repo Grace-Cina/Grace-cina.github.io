@@ -14,52 +14,44 @@ body {
 .top-bar ul {
   display: flex;
   list-style: none;
-  padding: 8px 20px;
+  padding: 8px 16px;
   margin: 0;
 }
 
 .top-bar a {
   color: white;
   text-decoration: none;
-  margin: 0 6px;
+  margin-right: 10px;
 }
 
 /* ===== BRAND BAR ===== */
 .brand-bar {
   background: black;
   color: white;
+  padding: 16px;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 15px 20px;
 }
 
-.brand-left {
-  display: flex;
-  align-items: center;
-  gap: 10px;
+.social-icons a {
+  color: white;
+  text-decoration: none;
+  margin-left: 10px;
+  font-size: 12px;
 }
 
 /* ===== MAIN NAV ===== */
 .main-nav {
   background: #73000a;
-}
-
-.nav-inner {
   display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 0 20px;
+  justify-content: flex-end;
 }
 
-.nav-links {
-  display: flex;
-}
-
-.nav-links a {
+.main-nav a {
   color: white;
-  padding: 16px 14px;
   text-decoration: none;
+  padding: 16px 14px;
   font-weight: bold;
   display: flex;
   align-items: center;
@@ -70,35 +62,64 @@ body {
   font-size: 10px;
 }
 
-.nav-icons {
-  color: white;
-  font-size: 20px;
-}
-
 /* ===== HERO ===== */
 .hero img {
   width: 100%;
   display: block;
 }
 
+/* ===== OVERLAY ===== */
+.overlay-section {
+  margin: 40px 16px;
+}
+
+.overlay-image img {
+  width: 100%;
+}
+
+.overlay-card {
+  background: #73000a;
+  color: white;
+  padding: 24px;
+  margin-top: 20px;
+}
+
+.overlay-btn {
+  display: inline-block;
+  margin-top: 16px;
+  padding: 10px 16px;
+  border: 2px solid white;
+  color: white;
+  text-decoration: none;
+}
+
+/* ===== QUOTE ===== */
+.quote-section {
+  margin: 60px 16px;
+  text-align: center;
+}
+
+.quote-section img {
+  width: 120px;
+  border-radius: 50%;
+  margin-bottom: 20px;
+}
+
 /* ===== STATEMENT ===== */
 .statement {
   background: #f2f2f2;
+  padding: 40px 20px;
   text-align: center;
-  padding: 60px 20px;
-  font-size: 18px;
 }
 
 /* ===== CARDS ===== */
 .card-grid {
-  display: flex;
-  flex-direction: column;
-  gap: 30px;
-  padding: 40px 20px;
+  margin: 60px 16px;
 }
 
 .card {
   background: #f2f2f2;
+  margin-bottom: 30px;
 }
 
 .card img {
@@ -107,38 +128,53 @@ body {
 
 .card h3 {
   color: #73000a;
-  padding: 15px;
+  padding: 16px;
 }
 
 /* ===== FOOTER ===== */
 .site-footer {
   background: #73000a;
   color: white;
-  padding: 40px 20px;
-}
-
-.footer-top {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-
-.social-icons {
-  display: flex;
-  gap: 12px;
+  text-align: center;
+  padding: 30px;
 }
 
 /* ===== LARGE SCREENS ===== */
 @media (min-width: 900px) {
 
-  .nav-inner {
+  .overlay-section {
+    position: relative;
     max-width: 1400px;
-    margin: 0 auto;
+    margin: 80px auto;
+  }
+
+  .overlay-card {
+    position: absolute;
+    top: 50%;
+    right: 0;
+    transform: translateY(-50%);
+    width: 420px;
+  }
+
+  .quote-section {
+    display: flex;
+    align-items: center;
+    gap: 60px;
+    max-width: 1100px;
+    margin: 100px auto;
+    text-align: left;
   }
 
   .card-grid {
-    flex-direction: row;
+    display: flex;
+    gap: 30px;
     max-width: 1200px;
-    margin: 0 auto;
+    margin: 80px auto;
+  }
+
+  .card {
+    flex: 1;
+    margin-bottom: 0;
   }
 }
+
