@@ -1,125 +1,107 @@
-/* ===== RESET ===== */
-body {
+* {
   margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
   font-family: Arial, Helvetica, sans-serif;
 }
 
-/* ===== TOP BAR ===== */
+/* TOP BAR */
 .top-bar {
   background: black;
   color: white;
-  font-size: 12px;
+  padding: 10px 20px;
 }
 
-.top-bar ul {
-  display: flex;
-  list-style: none;
-  padding: 8px 16px;
-  margin: 0;
-}
-
-.top-bar a {
+.top-links a {
   color: white;
+  margin-right: 15px;
   text-decoration: none;
-  margin-right: 10px;
+  font-size: 14px;
 }
 
-/* ===== BRAND BAR ===== */
-.brand-bar {
-  background: black;
-  color: white;
-  padding: 16px;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-
-.social-icons a {
-  color: white;
-  text-decoration: none;
-  margin-left: 10px;
-  font-size: 12px;
-}
-
-/* ===== MAIN NAV ===== */
+/* NAV */
 .main-nav {
   background: #73000a;
+}
+
+.main-nav ul {
   display: flex;
   justify-content: flex-end;
+  list-style: none;
+  padding: 15px 40px;
 }
 
-.main-nav a {
+.main-nav li {
   color: white;
-  text-decoration: none;
-  padding: 16px 14px;
-  font-weight: bold;
-  display: flex;
-  align-items: center;
-  gap: 6px;
+  margin-left: 25px;
+  cursor: pointer;
 }
 
-.arrow {
-  font-size: 10px;
+/* HERO */
+.hero {
+  position: relative;
 }
 
-/* ===== HERO ===== */
 .hero img {
   width: 100%;
   display: block;
 }
 
-/* ===== OVERLAY ===== */
-.overlay-section {
-  margin: 40px 16px;
-}
-
-.overlay-image img {
-  width: 100%;
-}
-
-.overlay-card {
+.hero-box {
+  position: absolute;
+  right: 80px;
+  top: 50%;
+  transform: translateY(-50%);
   background: #73000a;
   color: white;
-  padding: 24px;
-  margin-top: 20px;
+  padding: 40px;
+  max-width: 400px;
 }
 
-.overlay-btn {
-  display: inline-block;
-  margin-top: 16px;
-  padding: 10px 16px;
+.hero-box button {
+  margin-top: 15px;
+  background: none;
   border: 2px solid white;
   color: white;
-  text-decoration: none;
+  padding: 10px 15px;
 }
 
-/* ===== QUOTE ===== */
+/* QUOTE */
 .quote-section {
-  margin: 60px 16px;
-  text-align: center;
+  display: flex;
+  align-items: center;
+  gap: 40px;
+  padding: 80px;
 }
 
-.quote-section img {
-  width: 120px;
+.circle-image img {
+  width: 250px;
+  height: 250px;
   border-radius: 50%;
-  margin-bottom: 20px;
+  object-fit: cover;
 }
 
-/* ===== STATEMENT ===== */
-.statement {
-  background: #f2f2f2;
-  padding: 40px 20px;
-  text-align: center;
+blockquote {
+  font-size: 20px;
+  color: #73000a;
+  max-width: 600px;
 }
 
-/* ===== CARDS ===== */
-.card-grid {
-  margin: 60px 16px;
+/* CARDS */
+.cards {
+  display: flex;
+  gap: 30px;
+  padding: 80px;
+  background: #f4f4f4;
 }
 
 .card {
-  background: #f2f2f2;
-  margin-bottom: 30px;
+  background: white;
+  padding: 20px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
 }
 
 .card img {
@@ -128,53 +110,15 @@ body {
 
 .card h3 {
   color: #73000a;
-  padding: 16px;
+  margin-top: 15px;
 }
 
-/* ===== FOOTER ===== */
-.site-footer {
+/* FOOTER */
+.footer {
   background: #73000a;
   color: white;
   text-align: center;
-  padding: 30px;
+  padding: 20px;
 }
 
-/* ===== LARGE SCREENS ===== */
-@media (min-width: 900px) {
-
-  .overlay-section {
-    position: relative;
-    max-width: 1400px;
-    margin: 80px auto;
-  }
-
-  .overlay-card {
-    position: absolute;
-    top: 50%;
-    right: 0;
-    transform: translateY(-50%);
-    width: 420px;
-  }
-
-  .quote-section {
-    display: flex;
-    align-items: center;
-    gap: 60px;
-    max-width: 1100px;
-    margin: 100px auto;
-    text-align: left;
-  }
-
-  .card-grid {
-    display: flex;
-    gap: 30px;
-    max-width: 1200px;
-    margin: 80px auto;
-  }
-
-  .card {
-    flex: 1;
-    margin-bottom: 0;
-  }
-}
 
