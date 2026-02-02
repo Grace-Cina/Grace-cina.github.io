@@ -1,43 +1,48 @@
-/* Reset */
+/* ===== RESET ===== */
 body {
   margin: 0;
   font-family: Arial, Helvetica, sans-serif;
 }
 
-/* Utility Bar */
+/* ===== UTILITY BAR ===== */
 .utility-bar {
   background: black;
   padding: 8px 16px;
+  text-align: right;
 }
 
 .utility-bar a {
   color: white;
-  margin-right: 12px;
+  margin-left: 12px;
   font-size: 14px;
   text-decoration: none;
 }
 
-/* Header */
+/* ===== HEADER ===== */
 .header {
   background: black;
   color: white;
   padding: 20px 16px;
 }
 
-/* Navigation */
+/* ===== NAVIGATION ===== */
 .main-nav {
   background: #73000a;
   padding: 12px 16px;
+
+  /* 🔑 FIX */
+  display: flex;
+  justify-content: flex-end;
 }
 
 .main-nav a {
   color: white;
-  margin-right: 16px;
+  margin-left: 16px;
   text-decoration: none;
   font-weight: bold;
 }
 
-/* Hero */
+/* ===== HERO ===== */
 .hero {
   position: relative;
   height: 400px;
@@ -68,7 +73,7 @@ body {
   text-decoration: none;
 }
 
-/* Quote */
+/* ===== QUOTE ===== */
 .quote {
   display: flex;
   align-items: center;
@@ -77,7 +82,11 @@ body {
   background: #f2f2f2;
 }
 
-/* Cards */
+.quote img {
+  border-radius: 50%;
+}
+
+/* ===== CARDS ===== */
 .cards {
   padding: 32px 16px;
 }
@@ -97,7 +106,7 @@ body {
   color: #73000a;
 }
 
-/* Footer */
+/* ===== FOOTER ===== */
 .footer {
   background: #73000a;
   color: white;
@@ -105,7 +114,7 @@ body {
   padding: 20px;
 }
 
-/* -------- DESKTOP -------- */
+/* ===== DESKTOP ===== */
 @media (min-width: 768px) {
 
   .cards {
@@ -118,6 +127,7 @@ body {
   }
 
 }
+
 
 
 
