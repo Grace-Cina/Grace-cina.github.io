@@ -131,8 +131,12 @@ a:hover {
     display: flex;
     gap: 40px;
     align-items: flex-start;
-    margin-top: 40px;
+    background: #fff0f6;
+    padding: 20px;
+    border-radius: 10px;
+    max-width: 600px;
 }
+
 
 .project-text {
     flex: 1;
