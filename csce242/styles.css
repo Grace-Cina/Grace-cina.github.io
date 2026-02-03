@@ -124,6 +124,31 @@ a:hover {
         width: 100%;
     }
 }
+/* =========================
+   PROJECT SHOWCASE SECTION
+   ========================= */
+.project-showcase {
+    display: flex;
+    gap: 40px;
+    align-items: flex-start;
+    margin-top: 40px;
+}
+
+.project-text {
+    flex: 1;
+}
+
+.project-image {
+    flex: 1;
+}
+
+.project-image img {
+    width: 100%;
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+}
+
 
 
 
