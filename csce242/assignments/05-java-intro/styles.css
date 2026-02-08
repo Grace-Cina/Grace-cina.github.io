@@ -1,0 +1,103 @@
+/* ---------------------------
+   GLOBAL STYLES
+---------------------------- */
+body {
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  background-color: #f4f6f1;
+  color: #355f6b;
+  text-align: center;
+}
+
+h1 {
+  margin-top: 30px;
+  font-size: 36px;
+}
+
+h2 {
+  color: #e8897e;
+  margin-bottom: 30px;
+}
+
+h3 {
+  margin-top: 0;
+}
+
+/* ---------------------------
+   LAYOUT
+---------------------------- */
+.container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 25px;
+  max-width: 1100px;
+  margin: 0 auto 40px;
+  padding: 0 20px;
+}
+
+.card {
+  background-color: #f7f6dc;
+  border: 2px solid #9bbbc3;
+  padding: 25px;
+  min-height: 260px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+/* ---------------------------
+   GEOMETRY
+---------------------------- */
+.triangle {
+  width: 0;
+  height: 0;
+  border-left: 60px solid transparent;
+  border-right: 60px solid transparent;
+  border-bottom: 100px solid #d87a7a;
+  margin-top: 40px;
+}
+
+.hidden {
+  display: none;
+}
+
+/* ---------------------------
+   DATE PICKER
+---------------------------- */
+input[type="date"] {
+  padding: 6px;
+  font-size: 14px;
+  margin-top: 10px;
+}
+
+.date-output {
+  margin-top: 15px;
+  font-weight: bold;
+}
+
+/* ---------------------------
+   IMAGE
+---------------------------- */
+.image-box img {
+  width: 120px;
+  cursor: pointer;
+  margin-top: 25px;
+}
+
+/* ---------------------------
+   FOOTER
+---------------------------- */
+footer {
+  margin-bottom: 25px;
+  font-size: 14px;
+}
+
+/* ---------------------------
+   MOBILE
+---------------------------- */
+@media (max-width: 768px) {
+  .container {
+    grid-template-columns: 1fr;
+  }
+}
