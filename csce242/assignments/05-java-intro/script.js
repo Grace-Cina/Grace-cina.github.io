@@ -19,16 +19,20 @@ dateInput.addEventListener("change", () => {
   const [year, month, day] = dateInput.value.split("-");
 
   dateOutput.textContent = `You picked the date: ${month}/${day}/${year}`;
-});
-
-
+  });
 /* ---------------------------
-   IMAGE CHANGE
+   IMAGE CHANGE + FRAME
 ---------------------------- */
 const sunImage = document.getElementById("sunImage");
+const imageFrame = document.getElementById("imageFrame");
+
 let isSunny = false;
 
 sunImage.addEventListener("click", () => {
   isSunny = !isSunny;
   sunImage.src = isSunny ? "sunny.png" : "sun.png";
+  imageFrame.classList.toggle("active");
 });
+
+
+
