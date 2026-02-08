@@ -24,19 +24,18 @@ dateInput.addEventListener("change", () => {
 
   dateOutput.textContent = `You picked the date: ${month}/${day}/${year}`;
   });
+
 /* ---------------------------
-   IMAGE CHANGE + FRAME
+   IMAGE FRAME TOGGLE
 ---------------------------- */
 const sunImage = document.getElementById("sunImage");
 const imageFrame = document.getElementById("imageFrame");
 
-let isSunny = false;
-
 sunImage.addEventListener("click", () => {
-  isSunny = !isSunny;
-  sunImage.src = isSunny ? "happy-sun.png" : "happy-sun.png";
   imageFrame.classList.toggle("active");
 });
+
+
 
 
 
