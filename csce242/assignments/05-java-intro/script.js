@@ -11,17 +11,16 @@ geometryCard.addEventListener("click", () => {
 /* ---------------------------
    DATE PICKER
 ---------------------------- */
+
 const dateInput = document.getElementById("dateInput");
 const dateOutput = document.getElementById("dateOutput");
 
 dateInput.addEventListener("change", () => {
-  const selectedDate = new Date(dateInput.value);
-  const month = selectedDate.getMonth() + 1;
-  const day = selectedDate.getDate();
-  const year = selectedDate.getFullYear();
+  const [year, month, day] = dateInput.value.split("-");
 
   dateOutput.textContent = `You picked the date: ${month}/${day}/${year}`;
 });
+
 
 /* ---------------------------
    IMAGE CHANGE
