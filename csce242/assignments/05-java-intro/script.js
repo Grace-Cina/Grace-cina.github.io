@@ -1,3 +1,7 @@
+console.log("JS IS WORKING");
+
+
+
 /* ---------------------------
    GEOMETRY
 ---------------------------- */
@@ -30,7 +34,7 @@ let isSunny = false;
 
 sunImage.addEventListener("click", () => {
   isSunny = !isSunny;
-  sunImage.src = isSunny ? "sunny.png" : "sun.png";
+  sunImage.src = isSunny ? "happy-sun.png" : "happy-sun.png";
   imageFrame.classList.toggle("active");
 });
 
