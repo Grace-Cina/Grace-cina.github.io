@@ -62,18 +62,18 @@ body{
 
 .nav a:hover{
   background: var(--nav);
-  color: #5a3d3d;
+  color: #6b4f4f;
 }
 
 .nav a.active{
   background: var(--nav);
-  color: #5a3d3d;
+  color: #6b4f4f;
 }
 
 /* HERO */
 .hero{
   position: relative;
-  height: 320px;                 /* close to your wireframe */
+  height: 320px;
   overflow: hidden;
   background: #eee;
 }
@@ -83,17 +83,19 @@ body{
   inset:0;
   background-image: url("images/cina-event.jpg");
   background-size: cover;
-  background-position: center;
+
+  /* FIX #2: move image up so “Reserved” is visible */
+  background-position: center 25%;
 }
 
-/* overlay positioned like your wireframe: left-ish and centered vertically */
+/* FIX #1: overlay is faf6f2 at 30% opacity */
 .hero-overlay{
   position: absolute;
   left: 9%;
   top: 55%;
   transform: translateY(-50%);
   width: min(560px, 86vw);
-  background: rgba(250,246,242,0.75);
+  background: rgba(250,246,242,0.30);   /* #faf6f2 @ 30% */
   border: 1px solid var(--border);
   border-radius: 12px;
   padding: 18px 18px;
@@ -119,7 +121,7 @@ body{
   flex-wrap: wrap;
 }
 
-/* buttons on top of photo (like your wireframe) */
+/* Buttons on top of photo */
 .btn{
   display:inline-block;
   text-decoration:none;
@@ -140,7 +142,7 @@ body{
   filter: brightness(0.95);
 }
 
-/* ABOUT BLOCK (matches the soft band under hero) */
+/* ABOUT BLOCK */
 .about-block{
   background: #f3ece7;
   border-top: 1px solid var(--border);
@@ -213,10 +215,10 @@ body{
   text-align:center;
   padding: 10px 8px;
   font-size: 11px;
-  color: #5a3d3d;
+  color: #6b4f4f;
 }
 
-/* BANNER IMAGE (your scissors/craft background) */
+/* BANNER IMAGE */
 .banner{
   border-top: 1px solid var(--border);
   border-bottom: 1px solid var(--border);
@@ -254,7 +256,7 @@ body{
 
 .btn-pink{
   background: var(--button);
-  color: #5a3d3d;
+  color: #6b4f4f;
   border: 1px solid var(--border);
 }
 
@@ -325,4 +327,3 @@ body{
     justify-content:center;
   }
 }
-
