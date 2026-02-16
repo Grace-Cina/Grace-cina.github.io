@@ -5,7 +5,7 @@
   --nav:#f4c2d7;
   --button:#f4c2d7;
 
-  --panel:#ffffff;
+  --panel:#faf62f2;
   --border:rgba(217,165,179,0.55);
   --shadow: 0 10px 26px rgba(0,0,0,0.08);
 }
@@ -24,9 +24,11 @@ body{
   margin: 0 auto;
 }
 
-/* HEADER */
+/* =======================
+   HEADER
+======================= */
 .header{
-  background: #fff;
+  background: #faf6f2;
   border-bottom: 1px solid var(--border);
 }
 
@@ -70,7 +72,9 @@ body{
   color: #6b4f4f;
 }
 
-/* HERO */
+/* =======================
+   HERO
+======================= */
 .hero{
   position: relative;
   height: 320px;
@@ -84,21 +88,26 @@ body{
   background-image: url("images/cina-event.jpg");
   background-size: cover;
 
-  /* FIX #2: move image up so “Reserved” is visible */
-  background-position: center 25%;
+  /* moved UP so “Reserved” shows more */
+  background-position: center 15%;
 }
 
-/* FIX #1: overlay is faf6f2 at 30% opacity */
+/* overlay = faf6f2 @ 30% opacity (plus blur for readability) */
 .hero-overlay{
   position: absolute;
   left: 9%;
   top: 55%;
   transform: translateY(-50%);
   width: min(560px, 86vw);
-  background: rgba(250,246,242,0.30);   /* #faf6f2 @ 30% */
+
+  background: rgba(250,246,242,0.30); /* #faf6f2 at 30% */
+  backdrop-filter: blur(6px);
+  -webkit-backdrop-filter: blur(6px);
+
   border: 1px solid var(--border);
   border-radius: 12px;
   padding: 18px 18px;
+  box-shadow: 0 6px 20px rgba(0,0,0,0.08);
 }
 
 .hero-overlay h1{
@@ -113,6 +122,7 @@ body{
   margin: 0 0 14px;
   font-size: 12px;
   line-height: 1.5;
+  color: var(--subtext);
 }
 
 .hero-buttons{
@@ -121,30 +131,47 @@ body{
   flex-wrap: wrap;
 }
 
-/* Buttons on top of photo */
+/* =======================
+   BUTTONS
+======================= */
 .btn{
   display:inline-block;
   text-decoration:none;
   font-size: 12px;
   padding: 8px 14px;
   border-radius: 999px;
-  border: 1px solid transparent;
   cursor: pointer;
 }
 
+/* HERO buttons are now pink too */
 .btn-soft{
-  background: rgba(0,0,0,0.16);
-  color: #fff;
-  border-color: rgba(0,0,0,0.12);
+  background: var(--button);   /* #f4c2d7 */
+  color: #6b4f4f;
+  border: 1px solid var(--border);
+  box-shadow: 0 3px 10px rgba(0,0,0,0.06);
 }
 
 .btn-soft:hover{
   filter: brightness(0.95);
 }
 
-/* ABOUT BLOCK */
+/* CTA button */
+.btn-pink{
+  background: var(--button);
+  color: #6b4f4f;
+  border: 1px solid var(--border);
+  box-shadow: 0 3px 10px rgba(0,0,0,0.06);
+}
+
+.btn-pink:hover{
+  filter: brightness(0.96);
+}
+
+/* =======================
+   ABOUT BLOCK
+======================= */
 .about-block{
-  background: #f3ece7;
+  background: #faf6f2
   border-top: 1px solid var(--border);
   border-bottom: 1px solid var(--border);
 }
@@ -169,7 +196,9 @@ body{
   max-width: 760px;
 }
 
-/* PRODUCTS */
+/* =======================
+   PRODUCTS
+======================= */
 .products{
   padding: 26px 0 30px;
   background: var(--bg);
@@ -192,7 +221,7 @@ body{
 
 .product-card{
   width: 170px;
-  background: #fff;
+  background: #faf6f2;
   border: 1px solid var(--border);
   border-radius: 8px;
   overflow:hidden;
@@ -218,7 +247,9 @@ body{
   color: #6b4f4f;
 }
 
-/* BANNER IMAGE */
+/* =======================
+   BANNER IMAGE
+======================= */
 .banner{
   border-top: 1px solid var(--border);
   border-bottom: 1px solid var(--border);
@@ -231,9 +262,11 @@ body{
   background-position: center;
 }
 
-/* CTA */
+/* =======================
+   CTA
+======================= */
 .cta{
-  background: #f3ece7;
+  background: #faf6f2;
   padding: 26px 0 18px;
   text-align:center;
 }
@@ -252,16 +285,7 @@ body{
 .cta p{
   margin: 0 0 14px;
   font-size: 11px;
-}
-
-.btn-pink{
-  background: var(--button);
-  color: #6b4f4f;
-  border: 1px solid var(--border);
-}
-
-.btn-pink:hover{
-  filter: brightness(0.96);
+  color: var(--subtext);
 }
 
 .cta-footer{
@@ -279,9 +303,11 @@ body{
   line-height: 1.2;
 }
 
-/* FOOTER */
+/* =======================
+   FOOTER
+======================= */
 .footer{
-  background: #fff;
+  background: #faf6f2;
   border-top: 1px solid var(--border);
   padding: 10px 0;
   font-size: 11px;
@@ -310,7 +336,9 @@ body{
   text-decoration: underline;
 }
 
-/* RESPONSIVE */
+/* =======================
+   RESPONSIVE
+======================= */
 @media (max-width: 650px){
   .hero{
     height: 390px;
