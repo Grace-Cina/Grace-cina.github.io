@@ -5,7 +5,7 @@
   --nav:#f4c2d7;
   --button:#f4c2d7;
 
-  --panel:#faf62f2;
+  --panel:#faf6f2;
   --border:rgba(217,165,179,0.55);
   --shadow: 0 10px 26px rgba(0,0,0,0.08);
 }
@@ -30,13 +30,14 @@ body{
 .header{
   background: #faf6f2;
   border-bottom: 1px solid var(--border);
+  padding-left: 10px; /* nudges logo area slightly left */
 }
 
 .header-inner{
   display:flex;
   justify-content:space-between;
   align-items:center;
-  padding: 12px 0;
+  padding: 12px 20px; /* keeps nav from touching edge while logo stays left */
   gap: 14px;
 }
 
@@ -44,6 +45,7 @@ body{
   height: 44px;
   width: auto;
   display:block;
+  margin-left: 0; /* ensure no extra margin */
 }
 
 .nav{
@@ -79,7 +81,7 @@ body{
   position: relative;
   height: 320px;
   overflow: hidden;
-  background: #eee;
+  background: #faf6f2;
 }
 
 .hero-img{
@@ -88,8 +90,8 @@ body{
   background-image: url("images/cina-event.jpg");
   background-size: cover;
 
-  /* moved UP so “Reserved” shows more */
-  background-position: center 15%;
+  /* show Reserved more (move image up) */
+  background-position: center 8%;
 }
 
 /* overlay = faf6f2 @ 30% opacity (plus blur for readability) */
@@ -98,7 +100,7 @@ body{
   left: 9%;
   top: 55%;
   transform: translateY(-50%);
-  width: min(560px, 86vw);
+  width: min(620px, 86vw);  /* slightly wider so title stays on one line */
 
   background: rgba(250,246,242,0.30); /* #faf6f2 at 30% */
   backdrop-filter: blur(6px);
@@ -116,6 +118,10 @@ body{
   font-size: 30px;
   font-weight: 700;
   letter-spacing: 0.2px;
+  line-height: 1.2;
+
+  /* keeps “Love” lined up */
+  white-space: nowrap;
 }
 
 .hero-overlay p{
@@ -143,9 +149,8 @@ body{
   cursor: pointer;
 }
 
-/* HERO buttons are now pink too */
 .btn-soft{
-  background: var(--button);   /* #f4c2d7 */
+  background: var(--button);
   color: #6b4f4f;
   border: 1px solid var(--border);
   box-shadow: 0 3px 10px rgba(0,0,0,0.06);
@@ -155,7 +160,6 @@ body{
   filter: brightness(0.95);
 }
 
-/* CTA button */
 .btn-pink{
   background: var(--button);
   color: #6b4f4f;
@@ -171,7 +175,7 @@ body{
    ABOUT BLOCK
 ======================= */
 .about-block{
-  background: #faf6f2
+  background: #faf6f2;
   border-top: 1px solid var(--border);
   border-bottom: 1px solid var(--border);
 }
@@ -248,7 +252,7 @@ body{
 }
 
 /* =======================
-   BANNER IMAGE
+   BANNER IMAGE (CRAFT PIC)
 ======================= */
 .banner{
   border-top: 1px solid var(--border);
@@ -259,7 +263,19 @@ body{
   height: 220px;
   background-image: url("images/craft-background.png");
   background-size: cover;
-  background-position: center;
+
+  /* moved up a bit */
+  background-position: center 35%;
+  position: relative;
+}
+
+/* soft overlay = faf6f2 @ 30% */
+.banner-img::after{
+  content:"";
+  position:absolute;
+  inset:0;
+  background: rgba(250,246,242,0.30);
+  pointer-events:none;
 }
 
 /* =======================
@@ -349,6 +365,12 @@ body{
     top: 60%;
     transform: translate(-50%, -50%);
     text-align:center;
+    white-space: normal; /* allow wrapping on small screens */
+  }
+
+  .hero-overlay h1{
+    white-space: normal;
+    font-size: 28px;
   }
 
   .hero-buttons{
