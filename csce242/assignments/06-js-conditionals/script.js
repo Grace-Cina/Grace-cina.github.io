@@ -99,19 +99,26 @@ function countdownMessage(diffMinutes) {
 function updateCountdown() {
   const now = new Date();
 
-  // class time today at 8:30am
-  const classTime = new Date(
+  // 8:30am today
+  let classTime = new Date(
     now.getFullYear(),
     now.getMonth(),
     now.getDate(),
     8, 30, 0, 0
   );
 
+  // If it's MORE than 15 minutes after class started, switch to tomorrow's class
+  const fifteenMinsAfter = new Date(classTime.getTime() + 15 * 60000);
+  if (now > fifteenMinsAfter) {
+    classTime.setDate(classTime.getDate() + 1);
+  }
+
   const diffMs = classTime.getTime() - now.getTime();
   const diffMinutes = Math.round(diffMs / 60000);
 
   countdownText.textContent = countdownMessage(diffMinutes);
 }
+
 
 updateCountdown();
 setInterval(updateCountdown, 10000); // refresh every 10 seconds
