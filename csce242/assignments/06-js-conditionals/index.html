@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Assignment 8 - If Statements</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+  <div id="page">
+    <header>
+      <h1>Assignment 8</h1>
+      <h2>If Statements</h2>
+
+      <nav>
+        <div class="nav-wrap">
+
+          <!-- Small screen toggle -->
+          <button id="menuToggle" type="button">
+            <span id="arrow">▼</span>
+          </button>
+
+          <ul id="navItems">
+            <li><a id="linkEx1" href="#" class="active">Exercise 1</a></li>
+            <li><a id="linkEx2" href="#">Exercise 2</a></li>
+          </ul>
+
+        </div>
+      </nav>
+    </header>
+
+    <!-- Exercise 2 (Countdown) -->
+    <section id="ex2" class="card">
+      <h3>Countdown till class</h3>
+      <p id="countdownText" class="muted">Loading time...</p>
+    </section>
+
+    <!-- Exercise 1 (Slider) -->
+    <section id="ex1" class="card hidden">
+      <div class="slider-block">
+        <p class="muted" style="margin:0;">How many minutes until class?</p>
+
+        <div class="slider-row">
+          <input id="minutesRange" type="range" min="0" max="60" value="24">
+          <div class="big-number"><span id="rangeVal">24</span> minutes</div>
+          <div id="rangeMsg" class="msg"></div>
+        </div>
+      </div>
+    </section>
+
+    <footer>@Grace-Cina.com</footer>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
