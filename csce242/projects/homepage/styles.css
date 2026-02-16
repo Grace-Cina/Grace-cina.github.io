@@ -38,6 +38,7 @@ body{
   justify-content:space-between;
   align-items:center;
   padding: 12px 12px 12px 4px; /* keeps nav from touching edge while logo stays left */
+  max-width:none; /* allow header to stretch full width */
   
 }
 
@@ -91,7 +92,7 @@ body{
   background-size: cover;
 
   /* show Reserved more (move image up) */
-  background-position: center 0%;
+  background-position: center -60px;
 }
 
 /* overlay = faf6f2 @ 30% opacity (plus blur for readability) */
