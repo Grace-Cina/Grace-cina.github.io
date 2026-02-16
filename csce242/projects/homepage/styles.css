@@ -1,0 +1,328 @@
+:root{
+  --bg:#faf6f2;
+  --subtext:#6b4f4f;
+  --header:#d9a5b3;
+  --nav:#f4c2d7;
+  --button:#f4c2d7;
+
+  --panel:#ffffff;
+  --border:rgba(217,165,179,0.55);
+  --shadow: 0 10px 26px rgba(0,0,0,0.08);
+}
+
+*{ box-sizing:border-box; }
+
+body{
+  margin:0;
+  font-family: Arial, Helvetica, sans-serif;
+  background: var(--bg);
+  color: var(--subtext);
+}
+
+.wrap{
+  width: min(1050px, 92vw);
+  margin: 0 auto;
+}
+
+/* HEADER */
+.header{
+  background: #fff;
+  border-bottom: 1px solid var(--border);
+}
+
+.header-inner{
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  padding: 12px 0;
+  gap: 14px;
+}
+
+.logo{
+  height: 44px;
+  width: auto;
+  display:block;
+}
+
+.nav{
+  display:flex;
+  gap: 16px;
+  flex-wrap: wrap;
+  justify-content:flex-end;
+}
+
+.nav a{
+  text-decoration:none;
+  color: var(--header);
+  font-size: 13px;
+  padding: 6px 10px;
+  border-radius: 999px;
+  cursor: pointer;
+}
+
+.nav a:hover{
+  background: var(--nav);
+  color: #5a3d3d;
+}
+
+.nav a.active{
+  background: var(--nav);
+  color: #5a3d3d;
+}
+
+/* HERO */
+.hero{
+  position: relative;
+  height: 320px;                 /* close to your wireframe */
+  overflow: hidden;
+  background: #eee;
+}
+
+.hero-img{
+  position:absolute;
+  inset:0;
+  background-image: url("images/cina-event.jpg");
+  background-size: cover;
+  background-position: center;
+}
+
+/* overlay positioned like your wireframe: left-ish and centered vertically */
+.hero-overlay{
+  position: absolute;
+  left: 9%;
+  top: 55%;
+  transform: translateY(-50%);
+  width: min(560px, 86vw);
+  background: rgba(250,246,242,0.75);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  padding: 18px 18px;
+}
+
+.hero-overlay h1{
+  margin: 0 0 8px;
+  color: var(--header);
+  font-size: 30px;
+  font-weight: 700;
+  letter-spacing: 0.2px;
+}
+
+.hero-overlay p{
+  margin: 0 0 14px;
+  font-size: 12px;
+  line-height: 1.5;
+}
+
+.hero-buttons{
+  display:flex;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+/* buttons on top of photo (like your wireframe) */
+.btn{
+  display:inline-block;
+  text-decoration:none;
+  font-size: 12px;
+  padding: 8px 14px;
+  border-radius: 999px;
+  border: 1px solid transparent;
+  cursor: pointer;
+}
+
+.btn-soft{
+  background: rgba(0,0,0,0.16);
+  color: #fff;
+  border-color: rgba(0,0,0,0.12);
+}
+
+.btn-soft:hover{
+  filter: brightness(0.95);
+}
+
+/* ABOUT BLOCK (matches the soft band under hero) */
+.about-block{
+  background: #f3ece7;
+  border-top: 1px solid var(--border);
+  border-bottom: 1px solid var(--border);
+}
+
+.about-inner{
+  text-align:center;
+  padding: 22px 0 26px;
+  width: min(850px, 92vw);
+}
+
+.about-inner h2{
+  margin: 0 0 10px;
+  color: var(--header);
+  font-size: 15px;
+  font-weight: 700;
+}
+
+.about-inner p{
+  margin: 8px auto;
+  font-size: 11px;
+  line-height: 1.55;
+  max-width: 760px;
+}
+
+/* PRODUCTS */
+.products{
+  padding: 26px 0 30px;
+  background: var(--bg);
+}
+
+.section-title{
+  text-align:center;
+  margin: 0 0 16px;
+  color: var(--header);
+  font-size: 16px;
+  font-weight: 700;
+}
+
+.product-grid{
+  display:flex;
+  justify-content:center;
+  gap: 26px;
+  flex-wrap: wrap;
+}
+
+.product-card{
+  width: 170px;
+  background: #fff;
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  overflow:hidden;
+  box-shadow: var(--shadow);
+}
+
+.product-img{
+  height: 95px;
+  background-size: cover;
+  background-position: center;
+}
+
+.img-1{ background-image: url("images/wreath-sash.jpg"); }
+.img-2{ background-image: url("images/ornaments.jpg"); }
+.img-3{ background-image: url("images/monthly-milestones.jpg"); }
+.img-4{ background-image: url("images/cutting-boards.jpg"); }
+
+.product-label{
+  background: var(--nav);
+  text-align:center;
+  padding: 10px 8px;
+  font-size: 11px;
+  color: #5a3d3d;
+}
+
+/* BANNER IMAGE (your scissors/craft background) */
+.banner{
+  border-top: 1px solid var(--border);
+  border-bottom: 1px solid var(--border);
+}
+
+.banner-img{
+  height: 220px;
+  background-image: url("images/craft-background.png");
+  background-size: cover;
+  background-position: center;
+}
+
+/* CTA */
+.cta{
+  background: #f3ece7;
+  padding: 26px 0 18px;
+  text-align:center;
+}
+
+.cta-inner{
+  width: min(850px, 92vw);
+}
+
+.cta h2{
+  margin: 0 0 6px;
+  color: var(--header);
+  font-size: 18px;
+  font-weight: 700;
+}
+
+.cta p{
+  margin: 0 0 14px;
+  font-size: 11px;
+}
+
+.btn-pink{
+  background: var(--button);
+  color: #5a3d3d;
+  border: 1px solid var(--border);
+}
+
+.btn-pink:hover{
+  filter: brightness(0.96);
+}
+
+.cta-footer{
+  margin-top: 18px;
+  color: var(--header);
+  font-size: 11px;
+}
+
+.cta-brand{
+  font-weight: 700;
+  margin-bottom: 4px;
+}
+
+.cta-sub{
+  line-height: 1.2;
+}
+
+/* FOOTER */
+.footer{
+  background: #fff;
+  border-top: 1px solid var(--border);
+  padding: 10px 0;
+  font-size: 11px;
+  color: var(--subtext);
+}
+
+.footer-inner{
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.foot-right{
+  display:flex;
+  gap: 12px;
+}
+
+.foot-right a{
+  text-decoration:none;
+  color: var(--header);
+}
+
+.foot-right a:hover{
+  text-decoration: underline;
+}
+
+/* RESPONSIVE */
+@media (max-width: 650px){
+  .hero{
+    height: 390px;
+  }
+
+  .hero-overlay{
+    left: 50%;
+    top: 60%;
+    transform: translate(-50%, -50%);
+    text-align:center;
+  }
+
+  .hero-buttons{
+    justify-content:center;
+  }
+}
+
