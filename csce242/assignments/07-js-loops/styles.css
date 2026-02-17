@@ -1,0 +1,96 @@
+body{
+  margin:0;
+  height:100vh;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  background:#0f1433;
+  font-family:Arial, sans-serif;
+}
+
+/* tank */
+.tank{
+  width:420px;
+  height:300px;
+  border-radius:20px;
+  border:4px solid rgba(255,255,255,.3);
+  box-shadow:0 20px 40px rgba(0,0,0,.4);
+  overflow:hidden;
+}
+
+/* water */
+.water{
+  width:100%;
+  height:100%;
+  position:relative;
+  background:linear-gradient(#47b7ff,#0c4aa3);
+  overflow:hidden;
+}
+
+/* overlay image from assignment */
+.bubble-texture{
+  position:absolute;
+  inset:0;
+  background:url("bubbles.png");
+  background-size:350px;
+  opacity:.08;
+  pointer-events:none;
+}
+
+/* bubbles container */
+#bubbles{
+  position:absolute;
+  inset:0;
+}
+
+/* bubble style */
+.bubble{
+  position:absolute;
+  bottom:-40px;
+  border-radius:50%;
+  background:radial-gradient(circle at 30% 30%, white, rgba(255,255,255,.3) 40%, transparent 70%);
+  animation:rise linear infinite;
+}
+
+/* bubble animation */
+@keyframes rise{
+  from{ transform:translateY(0); }
+  to{ transform:translateY(-360px); }
+}
+
+/* gravel */
+.gravel{
+  position:absolute;
+  bottom:0;
+  width:100%;
+  height:60px;
+  background:#b88a63;
+}
+
+/* simple fish (CSS art) */
+/* resource inspiration allowed: CSS fish examples from CodePen */
+.fish{
+  position:absolute;
+  width:70px;
+  height:40px;
+  background:orange;
+  border-radius:40px;
+  left:-80px;
+  top:150px;
+  animation:swim 10s linear infinite;
+}
+
+.fish:after{
+  content:"";
+  position:absolute;
+  left:-18px;
+  top:10px;
+  border-top:10px solid transparent;
+  border-bottom:10px solid transparent;
+  border-right:18px solid orange;
+}
+
+@keyframes swim{
+  from{ left:-80px; }
+  to{ left:460px; }
+}
