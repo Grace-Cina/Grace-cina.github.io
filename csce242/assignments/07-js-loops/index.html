@@ -1,32 +1,24 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Fish Tank - CSS Art</title>
-  <link rel="stylesheet" href="styles.css">
+  <title>Fish Tank Bubbles (CSS Art)</title>
+  <link rel="stylesheet" href="styles.css" />
 </head>
-
 <body>
+  <main class="stage">
+    <section class="tank" aria-label="Fish tank">
+      <div class="rim"></div>
 
-<div class="tank">
-  <div class="water">
+      <div class="glass">
+        <div class="water" id="water">
+          <!-- bubbles injected by JS -->
+        </div>
+      </div>
 
-    <!-- optional texture image from assignment -->
-    <!-- place bubbles.png in same folder -->
-    <div class="bubble-texture"></div>
+      <div class="base"></div>
+    </section>
+  </main>
 
-    <!-- bubbles generated with JS -->
-    <div id="bubbles"></div>
-
-    <!-- gravel -->
-    <div class="gravel"></div>
-
-    <!-- simple fish -->
-    <div class="fish"></div>
-
-  </div>
-</div>
-
-<script src="script.js"></script>
-
+  <script src="script.js"></script>
 </body>
 </html>

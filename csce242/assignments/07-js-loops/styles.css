@@ -1,96 +1,129 @@
-body{
-  margin:0;
-  height:100vh;
-  display:flex;
-  justify-content:center;
-  align-items:center;
-  background:#0f1433;
-  font-family:Arial, sans-serif;
+/* CSS Art created by me (no external CSS art resource used). */
+
+* {
+  box-sizing: border-box;
 }
 
-/* tank */
-.tank{
-  width:420px;
-  height:300px;
-  border-radius:20px;
-  border:4px solid rgba(255,255,255,.3);
-  box-shadow:0 20px 40px rgba(0,0,0,.4);
-  overflow:hidden;
+body {
+  margin: 0;
+  min-height: 100vh;
+  display: grid;
+  place-items: center;
+  background: #f7efe9;
+  font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
 }
 
-/* water */
-.water{
-  width:100%;
-  height:100%;
-  position:relative;
-  background:linear-gradient(#47b7ff,#0c4aa3);
-  overflow:hidden;
+.stage {
+  width: min(720px, 92vw);
+  display: grid;
+  place-items: center;
+  padding: 32px 16px;
 }
 
-/* overlay image from assignment */
-.bubble-texture{
-  position:absolute;
-  inset:0;
-  background:url("bubbles.png");
-  background-size:350px;
-  opacity:.08;
-  pointer-events:none;
+.tank {
+  position: relative;
+  width: 520px;
+  height: 360px;
 }
 
-/* bubbles container */
-#bubbles{
-  position:absolute;
-  inset:0;
+/* Top rim */
+.rim {
+  position: absolute;
+  top: 10px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 84%;
+  height: 52px;
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.45);
+  border: 4px solid rgba(255, 255, 255, 0.9);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.06);
 }
 
-/* bubble style */
-.bubble{
-  position:absolute;
-  bottom:-40px;
-  border-radius:50%;
-  background:radial-gradient(circle at 30% 30%, white, rgba(255,255,255,.3) 40%, transparent 70%);
-  animation:rise linear infinite;
+/* Glass bowl */
+.glass {
+  position: absolute;
+  top: 28px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 92%;
+  height: 290px;
+  border-radius: 0 0 240px 240px / 0 0 200px 200px;
+  background: rgba(255, 255, 255, 0.22);
+  border: 6px solid rgba(255, 255, 255, 0.85);
+  box-shadow:
+    inset 0 0 0 6px rgba(255, 255, 255, 0.25),
+    0 24px 48px rgba(0, 0, 0, 0.08);
+  overflow: hidden;
 }
 
-/* bubble animation */
-@keyframes rise{
-  from{ transform:translateY(0); }
-  to{ transform:translateY(-360px); }
+/* Water */
+.water {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  bottom: 10px;
+  width: 88%;
+  height: 82%;
+  border-radius: 0 0 220px 220px / 0 0 180px 180px;
+  background: linear-gradient(to bottom, #6cc3f5 0%, #41aeea 45%, #2f9edc 100%);
+  box-shadow:
+    inset 0 18px 26px rgba(255, 255, 255, 0.25),
+    inset 0 -18px 30px rgba(0, 0, 0, 0.06);
+  overflow: hidden;
 }
 
-/* gravel */
-.gravel{
-  position:absolute;
-  bottom:0;
-  width:100%;
-  height:60px;
-  background:#b88a63;
+/* Water highlight sheen */
+.water::after {
+  content: "";
+  position: absolute;
+  top: 18px;
+  left: 24px;
+  width: 46%;
+  height: 70%;
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.10);
+  filter: blur(0.5px);
 }
 
-/* simple fish (CSS art) */
-/* resource inspiration allowed: CSS fish examples from CodePen */
-.fish{
-  position:absolute;
-  width:70px;
-  height:40px;
-  background:orange;
-  border-radius:40px;
-  left:-80px;
-  top:150px;
-  animation:swim 10s linear infinite;
+/* Base */
+.base {
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 72%;
+  height: 42px;
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.55);
+  border: 4px solid rgba(255, 255, 255, 0.85);
+  box-shadow: 0 14px 26px rgba(0, 0, 0, 0.08);
 }
 
-.fish:after{
-  content:"";
-  position:absolute;
-  left:-18px;
-  top:10px;
-  border-top:10px solid transparent;
-  border-bottom:10px solid transparent;
-  border-right:18px solid orange;
+/* Bubble styling */
+.bubble {
+  position: absolute;
+  bottom: -30px; /* start slightly below water */
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.55);
+  box-shadow: inset 0 0 0 2px rgba(255, 255, 255, 0.35);
+  opacity: 0.9;
+
+  /* each bubble gets custom animation duration/delay via CSS variables */
+  animation: rise var(--dur) linear infinite;
+  animation-delay: var(--delay);
 }
 
-@keyframes swim{
-  from{ left:-80px; }
-  to{ left:460px; }
+@keyframes rise {
+  0% {
+    transform: translateY(0) scale(0.9);
+    opacity: 0.2;
+  }
+  10% {
+    opacity: 0.95;
+  }
+  100% {
+    transform: translateY(calc(-1 * var(--rise))) scale(1.08);
+    opacity: 0;
+  }
 }
