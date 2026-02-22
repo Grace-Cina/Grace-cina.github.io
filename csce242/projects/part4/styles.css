@@ -621,3 +621,188 @@ body{
     width: min(360px, 92vw);
   }
 }
+/* =======================
+   SHOP PAGE
+======================= */
+
+.page-hero{
+  background: var(--bg);
+  padding: 26px 0 10px;
+}
+
+.page-hero-inner{
+  text-align:center;
+}
+
+.page-hero h1{
+  margin: 0 0 6px;
+  color: var(--header);
+  font-size: 34px;
+  font-weight: 800;
+}
+
+.page-hero p{
+  margin: 0;
+  font-size: 16px;
+  color: var(--subtext);
+}
+
+/* toolbar bar */
+.shop-toolbar{
+  background: var(--nav);
+  border-top: 1px solid var(--border);
+  border-bottom: 1px solid var(--border);
+}
+
+.toolbar-inner{
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  padding: 10px 0;
+  font-size: 14px;
+  color: #6b4f4f;
+}
+
+/* grid wrapper */
+.shop-grid{
+  padding: 22px 0 28px;
+  background: var(--bg);
+}
+
+.shop-product-grid{
+  gap: 22px;
+}
+
+/* shop product cards */
+.shop-card{
+  width: 210px;
+  background: #faf6f2;
+  border: 1px solid var(--border);
+  border-radius: 16px;
+  overflow:hidden;
+  box-shadow: var(--shadow);
+}
+
+.shop-img{
+  height: 140px;
+  background-size: cover;
+  background-position: center;
+}
+
+.shop-info{
+  background: var(--nav);
+  padding: 12px 12px 14px;
+  text-align:center;
+}
+
+.shop-info h3{
+  margin: 0 0 6px;
+  font-size: 14px;
+  color: #6b4f4f;
+  font-weight: 700;
+}
+
+.price{
+  font-size: 13px;
+  color: #6b4f4f;
+  margin-bottom: 10px;
+}
+
+.btn-small{
+  font-size: 12px;
+  padding: 7px 12px;
+}
+
+/* Product images (your exact filenames) */
+.p1{ background-image: url("images/ballerina.jpg"); }
+.p2{ background-image: url("images/zoomed-in-wreath-sash.jpg"); }
+.p3{ background-image: url("images/starwars-milestone.jpg"); }
+.p4{ background-image: url("images/calendar.jpg"); }
+.p5{ background-image: url("images/wooden-nursery-sign.jpg"); }
+.p6{ background-image: url("images/sweater.jpg"); }
+.p7{ background-image: url("images/cutting-boards.jpg"); }
+.p8{ background-image: url("images/first-day.jpg"); }
+
+/* info section */
+.shop-info-section{
+  padding: 18px 0 10px;
+  background: var(--bg);
+}
+
+.info-grid{
+  display:flex;
+  justify-content:center;
+  gap: 22px;
+  flex-wrap: wrap;
+  padding: 10px 0 0;
+}
+
+.info-card{
+  width: 240px;
+  background: var(--nav);
+  border: 1px solid var(--border);
+  border-radius: 16px;
+  box-shadow: var(--shadow);
+  padding: 14px 14px 16px;
+  text-align:center;
+}
+
+.info-card h3{
+  margin: 0 0 8px;
+  color: #6b4f4f;
+  font-size: 14px;
+  font-weight: 800;
+}
+
+.info-card p{
+  margin: 0;
+  font-size: 13px;
+  line-height: 1.45;
+  color: #6b4f4f;
+}
+
+/* ✅ “blank pink spot” becomes an order-steps card */
+.info-card-steps{
+  width: 240px;
+}
+
+.steps{
+  display:flex;
+  flex-direction:column;
+  gap: 10px;
+  margin-top: 8px;
+}
+
+.step{
+  display:flex;
+  align-items:center;
+  gap: 10px;
+  justify-content:center;
+}
+
+.step-dot{
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  background: #faf6f2;
+  border: 1px solid var(--border);
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  font-weight: 800;
+  color: var(--header);
+}
+
+.step-text{
+  font-size: 13px;
+  color: #6b4f4f;
+  font-weight: 700;
+}
+
+/* responsive */
+@media (max-width: 700px){
+  .page-hero h1{ font-size: 28px; }
+  .shop-card{ width: min(360px, 92vw); }
+  .shop-img{ height: 180px; }
+  .info-card{ width: min(360px, 92vw); }
+}
