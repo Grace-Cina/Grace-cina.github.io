@@ -1,21 +1,46 @@
 body{
     text-align:center;
-    background:#f3f1e8;
+    background:#fff0f5; /* light pink background */
     font-family:Arial, Helvetica, sans-serif;
+    color:#6b3a4a;
+}
+
+#content{
+    max-width:900px;
+    margin:auto;
+    background:white;
+    padding:30px;
+    border-radius:15px;
+    box-shadow:0 4px 12px rgba(0,0,0,0.1);
 }
 
 h1{
-    color:#4f7e8a;
+    color:#d66a8a;   /* main pink */
     font-size:48px;
+    margin-bottom:5px;
 }
 
 h2{
-    color:#d97878;
+    color:#f08cab;   /* lighter pink */
+    margin-top:0;
+}
+
+label{
+    font-size:18px;
+}
+
+select{
+    padding:6px 12px;
+    border:2px solid #f08cab;
+    border-radius:6px;
+    background:white;
+    font-size:16px;
 }
 
 ul{
     list-style:none;
     padding:0;
+    margin-top:15px;
 }
 
 li{
@@ -23,9 +48,13 @@ li{
 }
 
 a{
-    color:#3f7b8d;
+    color:#c45a7c;        /* pink links */
     text-decoration:underline;
     font-size:18px;
+}
+
+a:hover{
+    color:#ff7aa8;        /* brighter pink hover */
 }
 
 .hidden{
@@ -33,5 +62,10 @@ a{
 }
 
 #videoBox{
+    margin-top:20px;
+}
+
+p{
+    color:#d66a8a;
     margin-top:20px;
 }
