@@ -1,0 +1,37 @@
+body{
+    text-align:center;
+    background:#f3f1e8;
+    font-family:Arial, Helvetica, sans-serif;
+}
+
+h1{
+    color:#4f7e8a;
+    font-size:48px;
+}
+
+h2{
+    color:#d97878;
+}
+
+ul{
+    list-style:none;
+    padding:0;
+}
+
+li{
+    margin:10px;
+}
+
+a{
+    color:#3f7b8d;
+    text-decoration:underline;
+    font-size:18px;
+}
+
+.hidden{
+    display:none;
+}
+
+#videoBox{
+    margin-top:20px;
+}
