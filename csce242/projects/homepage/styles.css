@@ -240,7 +240,7 @@ body{
 }
 
 /* =======================
-   BANNER IMAGE
+   BANNER IMAGE (RESERVED PIC)
 ======================= */
 .banner{
   border-top: 1px solid var(--border);
@@ -249,19 +249,21 @@ body{
 
 .banner-img{
   height: 320px;
-
-  /* ✅ swap: event/reserved image goes here now */
   background-image: url("images/cina-event.jpg");
   background-size: cover;
-  background-position: center;
+
+  /* ✅ show more of the top where the "Reserved" sign usually is */
+  background-position: center top;
+
   position: relative;
 }
 
+/* ✅ lighter overlay so the text in the photo stays visible */
 .banner-img::after{
   content:"";
   position:absolute;
   inset:0;
-  background: rgba(250,246,242,0.25);
+  background: rgba(250,246,242,0.15);
   pointer-events:none;
 }
 
