@@ -1,11 +1,10 @@
-/* ================= ROOT COLORS (UNCHANGED FROM YOUR SITE) ================= */
-
 :root{
   --bg:#faf6f2;
   --subtext:#6b4f4f;
   --header:#d9a5b3;
   --nav:#f4c2d7;
   --button:#f4c2d7;
+
   --panel:#ffffff;
   --border:rgba(217,165,179,0.55);
   --shadow: 0 12px 30px rgba(0,0,0,0.10);
@@ -18,244 +17,831 @@ body{
   font-family: Arial, Helvetica, sans-serif;
   background: var(--bg);
   color: var(--subtext);
-  line-height:1.6;
+  font-size: 16px;
+  line-height: 1.55;
 }
 
-/* ================= HEADER ================= */
+.wrap{
+  width: min(1200px, 94vw);
+  margin: 0 auto;
+}
 
-.site-header{
+/* =======================
+   HEADER
+======================= */
+.header{
   background: var(--bg);
-  border-bottom:1px solid var(--border);
+  border-bottom: 1px solid var(--border);
 }
 
 .header-inner{
-  width:min(1100px,92%);
-  margin:auto;
-  padding:16px 0;
   display:flex;
   justify-content:space-between;
   align-items:center;
+  padding: 16px 0;
+  gap: 18px;
 }
 
-.brand-logo{ height:50px; }
+.logo{
+  height: 54px;
+  width: auto;
+  display:block;
+}
 
 .nav{
   display:flex;
-  gap:18px;
+  gap: 18px;
+  flex-wrap: wrap;
+  justify-content:flex-end;
 }
 
 .nav a{
   text-decoration:none;
-  color:var(--header);
-  padding:10px 16px;
-  border-radius:999px;
+  color: var(--header);
+  font-size: 16px;
+  padding: 10px 14px;
+  border-radius: 999px;
+  transition: 0.15s ease;
 }
 
-.nav a:hover,
+.nav a:hover{
+  background: var(--nav);
+  color: var(--subtext);
+}
+
 .nav a.active{
-  background:var(--nav);
-  color:var(--subtext);
+  background: var(--nav);
+  color: var(--subtext);
 }
 
-/* ================= HERO (FIXED SYSTEM) ================= */
-
-.page-hero{
-  position:relative;
-  height:420px;
-  overflow:hidden;
+/* =======================
+   HERO
+======================= */
+.hero{
+  position: relative;
+  height: 460px;
+  overflow: hidden;
+  background: var(--bg);
 }
 
-.page-hero img{
-  width:100%;
-  height:100%;
-  object-fit:cover;
+.hero-img{
+  position:absolute;
+  inset:0;
+
+  /* ✅ teacher wanted scissors/craft image in hero */
+  background-image: url("images/craft-background.png");
+  background-size: cover;
+  background-position: center;
+  transform: scale(1.03);
 }
 
 .hero-overlay{
-  position:absolute;
-  inset:0;
-  display:flex;
-  flex-direction:column;
-  justify-content:center;
-  align-items:center;
-  text-align:center;
-  padding:20px;
-  background:rgba(250,246,242,0.65);
+  position: absolute;
+  left: 6%;
+  top: 56%;
+  transform: translateY(-50%);
+  width: min(720px, 92vw);
+
+  background: rgba(250,246,242,0.80);
+  border: 1px solid var(--border);
+  border-radius: 16px;
+  padding: 26px 26px;
+  box-shadow: var(--shadow);
 }
 
 .hero-overlay h1{
-  margin:0 0 10px;
-  font-size:48px;
-  color:var(--header);
+  margin: 0 0 12px;
+  color: var(--header);
+  font-size: 44px;
+  font-weight: 800;
+  letter-spacing: 0.2px;
+  line-height: 1.15;
 }
 
 .hero-overlay p{
-  margin:0;
-  font-size:18px;
+  margin: 0 0 18px;
+  font-size: 18px;
+  color: var(--subtext);
+  max-width: 58ch;
 }
 
-/* ================= PAGE WIDTH ================= */
+.hero-buttons{
+  display:flex;
+  gap: 12px;
+  flex-wrap: wrap;
+}
 
-.page{
-  width:min(1100px,92%);
-  margin:auto;
-  padding:50px 0;
+/* =======================
+   BUTTONS
+======================= */
+.btn{
+  display:inline-block;
+  text-decoration:none;
+  font-size: 16px;
+  padding: 12px 20px;
+  border-radius: 999px;
+  cursor: pointer;
+  transition: 0.15s ease;
+}
+
+.btn-soft,
+.btn-pink{
+  background: var(--button);
+  color: var(--subtext);
+  border: 1px solid var(--border);
+  box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+}
+
+.btn-soft:hover,
+.btn-pink:hover{
+  filter: brightness(0.97);
+  transform: translateY(-1px);
+}
+
+/* =======================
+   ABOUT BLOCK
+======================= */
+.about-block{
+  background: var(--panel);
+  border-top: 1px solid var(--border);
+  border-bottom: 1px solid var(--border);
+}
+
+.about-inner{
+  text-align:center;
+  padding: 46px 0 44px;
+  width: min(900px, 92vw);
+}
+
+.about-inner h2{
+  margin: 0 0 18px;
+  color: var(--header);
+  font-size: 30px;
+  font-weight: 800;
+}
+
+.about-inner p{
+  margin: 14px auto;
+  font-size: 18px;
+  line-height: 1.7;
+  max-width: 75ch;
+}
+
+/* =======================
+   PRODUCTS
+======================= */
+.products{
+  padding: 54px 0 62px;
+  background: var(--bg);
 }
 
 .section-title{
   text-align:center;
-  color:var(--header);
-  font-size:36px;
-  margin-bottom:10px;
+  margin: 0 0 30px;
+  color: var(--header);
+  font-size: 32px;
+  font-weight: 800;
 }
 
-.section-subtitle{
-  text-align:center;
-  margin-bottom:40px;
+.product-grid{
+  display:flex;
+  justify-content:center;
+  gap: 28px;
+  flex-wrap: wrap;
 }
 
-/* ================= GALLERY GRID ================= */
-
-.gallery-grid{
-  display:grid;
-  grid-template-columns:repeat(3,1fr);
-  gap:28px;
-}
-
-.gallery-card{
-  border-radius:16px;
+.product-card{
+  width: 240px;
+  background: var(--panel);
+  border: 1px solid var(--border);
+  border-radius: 14px;
   overflow:hidden;
-  box-shadow:var(--shadow);
+  box-shadow: var(--shadow);
 }
 
-.gallery-card img{
-  width:100%;
-  height:200px;
-  object-fit:cover;
-  display:block;
+.product-img{
+  height: 150px;
+  background-size: cover;
+  background-position: center;
 }
 
-/* ================= SHOP GRID ================= */
+.img-1{ background-image: url("images/wreath-sash.jpg"); }
+.img-2{ background-image: url("images/ornaments.jpg"); }
+.img-3{ background-image: url("images/monthly-milestones.jpg"); }
+.img-4{ background-image: url("images/cutting-boards.jpg"); }
 
-.shop-grid{
-  display:grid;
-  grid-template-columns:repeat(4,1fr);
-  gap:28px;
-}
-
-.shop-card{
-  background:var(--panel);
-  border-radius:16px;
-  overflow:hidden;
-  box-shadow:var(--shadow);
+.product-label{
+  background: var(--nav);
   text-align:center;
+  padding: 14px 10px;
+  font-size: 16px;
+  color: var(--subtext);
+  font-weight: 700;
 }
 
-.shop-card img{
-  width:100%;
-  height:200px;
-  object-fit:cover;
+/* =======================
+   BANNER IMAGE (RESERVED PIC)
+======================= */
+.banner-img{
+  height: 340px;                 /* slightly taller so more of photo shows */
+  background-image: url("images/cina-event.jpg");
+  background-size: cover;
+
+  /* SHIFT IMAGE DOWN so reserved sign is visible */
+  background-position: center 85%;
+
+  position: relative;
 }
 
-.shop-card h3{
-  margin:15px 0 5px;
+.banner-img::after{
+  content:"";
+  position:absolute;
+  inset:0;
+  background: rgba(250,246,242,0.10);  /* lighter overlay so sign is clear */
+  pointer-events:none;
 }
 
-.shop-card p{
-  margin:0 0 15px;
-  font-weight:bold;
-}
-
-/* ================= BUTTON ================= */
-
-.btn{
-  display:inline-block;
-  background:var(--button);
-  color:var(--subtext);
-  padding:12px 22px;
-  border-radius:999px;
-  text-decoration:none;
-  border:1px solid var(--border);
-  margin-bottom:20px;
-}
-
-/* ================= CTA ================= */
-
+/* =======================
+   CTA
+======================= */
 .cta{
+  background: var(--panel);
+  padding: 54px 0 42px;
   text-align:center;
-  padding:70px 20px;
-  background:var(--panel);
-  margin-top:60px;
+}
+
+.cta-inner{
+  width: min(900px, 92vw);
 }
 
 .cta h2{
-  color:var(--header);
-  font-size:36px;
-  margin-bottom:10px;
+  margin: 0 0 10px;
+  color: var(--header);
+  font-size: 32px;
+  font-weight: 800;
 }
 
-/* ================= CONTACT ================= */
-
-.contact-section{
-  padding:80px 20px;
-  text-align:center;
+.cta p{
+  margin: 0 0 20px;
+  font-size: 18px;
+  color: var(--subtext);
 }
 
-.contact-section h1{
-  color:var(--header);
-  font-size:40px;
+.cta-footer{
+  margin-top: 26px;
+  color: var(--header);
+  font-size: 16px;
 }
 
-.contact-form{
-  max-width:600px;
-  margin:40px auto 0;
-  display:flex;
-  flex-direction:column;
-  gap:20px;
+.cta-brand{
+  font-weight: 800;
+  margin-bottom: 6px;
 }
 
-.contact-form input,
-.contact-form textarea{
-  padding:15px;
-  border-radius:12px;
-  border:1px solid var(--border);
-  font-size:16px;
+.cta-sub{
+  line-height: 1.2;
 }
 
-.contact-form textarea{
-  min-height:150px;
-}
-
-/* ================= FOOTER ================= */
-
-.site-footer{
-  border-top:1px solid var(--border);
-  padding:18px 0;
-  margin-top:60px;
+/* =======================
+   FOOTER
+======================= */
+.footer{
+  background: var(--bg);
+  border-top: 1px solid var(--border);
+  padding: 16px 0;
+  font-size: 14px;
+  color: var(--subtext);
 }
 
 .footer-inner{
-  width:min(1100px,92%);
-  margin:auto;
   display:flex;
+  justify-content:space-between;
+  align-items:center;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+.foot-right{
+  display:flex;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+
+.foot-right a{
+  text-decoration:none;
+  color: var(--header);
+  font-weight: 600;
+}
+
+.foot-right a:hover{
+  text-decoration: underline;
+}
+
+/* =======================
+   RESPONSIVE
+======================= */
+@media (max-width: 650px){
+  .header-inner{
+    flex-direction:column;
+    align-items:flex-start;
+  }
+
+  .nav{
+    justify-content:flex-start;
+    gap: 10px;
+  }
+
+  .hero{
+    height: 520px;
+  }
+
+  .hero-overlay{
+    left: 50%;
+    top: 62%;
+    transform: translate(-50%, -50%);
+    text-align:center;
+    padding: 22px 18px;
+  }
+
+  .hero-overlay h1{
+    font-size: 34px;
+  }
+
+  .hero-overlay p{
+    font-size: 16px;
+  }
+
+  .hero-buttons{
+    justify-content:center;
+  }
+
+  .product-card{
+    width: min(320px, 92vw);
+  }
+
+  .product-img{
+    height: 180px;
+  }
+
+  .section-title{
+    font-size: 28px;
+  }
+
+  .about-inner h2,
+  .cta h2{
+    font-size: 28px;
+  }
+
+  .about-inner p,
+  .cta p{
+    font-size: 16px;
+  }
+}
+
+/* ---------- GLOBAL HELPERS ---------- */
+img { max-width: 100%; display: block; }
+
+.page { padding: 40px 0; }
+.section { padding: 20px 0 50px; }
+
+.section-subtitle{
+  text-align:center;
+  margin: -10px auto 26px;
+  max-width: 70ch;
+  color: var(--subtext);
+}
+
+/* ---------- UNIFY HEADER (works for .header AND .site-header) ---------- */
+.site-header,
+.header{
+  background: var(--bg);
+  border-bottom: 1px solid var(--border);
+}
+
+.site-header .header-inner{
+  width: min(1200px, 94vw);
+  margin: 0 auto;
+  padding: 16px 0;
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  gap: 18px;
+}
+
+/* Make your existing .header layout match too */
+.header .header-inner{
+  width: min(1200px, 94vw);
+  margin: 0 auto;
+  padding: 16px 0;
+}
+
+/* Logo support for both filenames/classes */
+.brand-logo,
+.logo{
+  height: 54px;
+  width: auto;
+}
+
+/* Nav consistent everywhere */
+.site-header .nav,
+.header .nav{
+  display:flex;
+  gap: 18px;
+  flex-wrap: wrap;
+  justify-content:flex-end;
+}
+
+.site-header .nav a,
+.header .nav a{
+  text-decoration:none;
+  color: var(--header);
+  font-size: 16px;
+  padding: 10px 14px;
+  border-radius: 999px;
+  transition: 0.15s ease;
+}
+
+.site-header .nav a:hover,
+.header .nav a:hover{
+  background: var(--nav);
+  color: var(--subtext);
+}
+
+.site-header .nav a.active,
+.header .nav a.active{
+  background: var(--nav);
+  color: var(--subtext);
+}
+
+/* ---------- PAGE HERO (Shop + Gallery) ---------- */
+.page-hero{
+  background: var(--panel);
+  border-bottom: 1px solid var(--border);
+}
+
+.page-hero-inner{
+  padding: 44px 0 38px;
+  text-align:center;
+  width: min(900px, 92vw);
+  margin: 0 auto;
+}
+
+.page-hero h1{
+  margin: 0 0 10px;
+  color: var(--header);
+  font-size: 36px;
+  font-weight: 800;
+}
+
+.page-hero p{
+  margin: 0 auto;
+  max-width: 70ch;
+  font-size: 18px;
+}
+
+/* Gallery hero variant (you used .page-hero--gallery) */
+.page-hero--gallery{
+  position: relative;
+  min-height: 220px;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  background: var(--panel);
+}
+
+.page-hero--gallery .hero-overlay{
+  position: static;     /* override homepage hero overlay positioning */
+  transform: none;
+  left: auto;
+  top: auto;
+  width: min(900px, 92vw);
+  text-align:center;
+  padding: 34px 22px;
+  background: rgba(250,246,242,0.85);
+  border: 1px solid var(--border);
+  border-radius: 16px;
+  box-shadow: var(--shadow);
+}
+
+.page-hero--gallery .hero-overlay h1{
+  font-size: 38px;
+  margin: 0 0 8px;
+  color: var(--header);
+}
+
+.page-hero--gallery .hero-overlay p{
+  margin: 0;
+  font-size: 18px;
+}
+
+/* ---------- SHOP TOOLBAR ---------- */
+.shop-toolbar{
+  background: var(--nav);
+  border-bottom: 1px solid var(--border);
+}
+
+.toolbar-inner{
+  padding: 12px 0;
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  font-weight: 700;
+  color: var(--subtext);
+}
+
+/* ---------- SHOP GRID ---------- */
+.shop-grid{
+  padding: 34px 0 20px;
+  background: var(--bg);
+}
+
+.shop-product-grid{
+  display:grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 22px;
+}
+
+.shop-card{
+  background: var(--panel);
+  border: 1px solid var(--border);
+  border-radius: 14px;
+  overflow:hidden;
+  box-shadow: var(--shadow);
+  display:flex;
+  flex-direction:column;
+}
+
+.shop-img{
+  height: 170px;
+  background-size: cover;
+  background-position: center;
+}
+
+.shop-info{
+  padding: 14px 14px 16px;
+  display:flex;
+  flex-direction:column;
+  gap: 8px;
+}
+
+.shop-info h3{
+  margin: 0;
+  font-size: 16px;
+  color: var(--subtext);
+  font-weight: 800;
+}
+
+.price{
+  font-weight: 800;
+  color: var(--header);
+}
+
+/* small button variant used in shop */
+.btn-small{
+  padding: 10px 14px;
+  font-size: 14px;
+  align-self:flex-start;
+}
+
+/* ---------- CUSTOMIZATION INFO SECTION (3 cards) ---------- */
+.shop-info-section{
+  padding: 40px 0 40px;
+  background: var(--panel);
+  border-top: 1px solid var(--border);
+  border-bottom: 1px solid var(--border);
+}
+
+.info-grid{
+  margin-top: 18px;
+  display:grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 18px;
+}
+
+.info-card{
+  background: rgba(244,194,215,0.25);
+  border: 1px solid var(--border);
+  border-radius: 14px;
+  padding: 18px 16px;
+  box-shadow: 0 6px 18px rgba(0,0,0,0.06);
+}
+
+.info-card h3{
+  margin: 0 0 10px;
+  color: var(--header);
+  font-weight: 900;
+}
+
+.info-card p{
+  margin: 0;
+}
+
+/* Steps styling (center card in your shop page) */
+.steps{
+  margin-top: 10px;
+  display:flex;
+  gap: 12px;
   justify-content:space-between;
 }
 
-/* ================= RESPONSIVE ================= */
-
-@media(max-width:1000px){
-
-  .shop-grid{ grid-template-columns:repeat(2,1fr); }
-  .gallery-grid{ grid-template-columns:repeat(2,1fr); }
-
+.step{
+  display:flex;
+  align-items:center;
+  gap: 10px;
 }
 
-@media(max-width:600px){
-
-  .shop-grid{ grid-template-columns:1fr; }
-  .gallery-grid{ grid-template-columns:1fr; }
-
-  .hero-overlay h1{ font-size:34px; }
-
+.step-dot{
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  background: var(--button);
+  border: 1px solid var(--border);
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  font-weight: 900;
 }
 
+.step-text{
+  font-weight: 700;
+}
+
+/* ---------- GALLERY GRID ---------- */
+.gallery-grid{
+  display:grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 18px;
+  margin-top: 18px;
+}
+
+.gallery-card{
+  background: var(--panel);
+  border: 1px solid var(--border);
+  border-radius: 14px;
+  overflow:hidden;
+  box-shadow: var(--shadow);
+}
+
+.gallery-card img{
+  width: 100%;
+  height: 190px;
+  object-fit: cover;
+}
+
+/* REQUIRED: first gallery item clickable -> give hover feedback */
+.gallery-card a{ display:block; }
+.gallery-card:hover{
+  transform: translateY(-2px);
+  transition: 0.15s ease;
+}
+
+/* ---------- CONTACT PAGE (match PDF: form left, info right) ---------- */
+.contact-section{
+  width: min(1100px, 94vw);
+  margin: 0 auto;
+  padding: 44px 0 60px;
+}
+
+.contact-section h1{
+  margin: 0 0 8px;
+  text-align:center;
+  color: var(--header);
+  font-size: 38px;
+  font-weight: 900;
+}
+
+.contact-section > p{
+  text-align:center;
+  margin: 0 auto 26px;
+  max-width: 70ch;
+}
+
+/* Turn your contact content into a 2-column layout like the PDF */
+.contact-layout{
+  display:grid;
+  grid-template-columns: 1.2fr 0.8fr;
+  gap: 22px;
+  align-items:start;
+  margin-top: 18px;
+}
+
+/* If you didn't add a wrapper div, make form look like the left card anyway */
+.contact-form{
+  background: var(--panel);
+  border: 1px solid var(--border);
+  border-radius: 16px;
+  padding: 18px;
+  box-shadow: var(--shadow);
+  display:flex;
+  flex-direction:column;
+  gap: 12px;
+}
+
+.contact-form input,
+.contact-form textarea,
+.contact-form select{
+  width: 100%;
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  padding: 12px 12px;
+  font-size: 15px;
+  background: #fff;
+  color: var(--subtext);
+}
+
+.contact-form textarea{
+  min-height: 120px;
+  resize: vertical;
+}
+
+.contact-form .btn{
+  width: fit-content;
+  background: var(--button);
+  border: 1px solid var(--border);
+  color: var(--subtext);
+  box-shadow: 0 6px 14px rgba(0,0,0,0.08);
+}
+
+/* Right info card (optional – if you add it) */
+.contact-info{
+  background: rgba(244,194,215,0.18);
+  border: 1px solid var(--border);
+  border-radius: 16px;
+  padding: 18px;
+  box-shadow: 0 6px 18px rgba(0,0,0,0.06);
+}
+
+.contact-info h2{
+  margin: 0 0 12px;
+  color: var(--header);
+  font-weight: 900;
+}
+
+.contact-info p{ margin: 8px 0; }
+
+/* ---------- CTA CONSISTENT (works on all pages) ---------- */
+.cta{
+  background: var(--panel);
+  padding: 54px 0 42px;
+  text-align:center;
+  border-top: 1px solid var(--border);
+}
+
+/* In gallery you used .cta without .wrap; keep it centered */
+.cta > *{
+  width: min(900px, 92vw);
+  margin-left:auto;
+  margin-right:auto;
+}
+
+/* ---------- FOOTER UNIFY (works for .footer AND .site-footer) ---------- */
+.site-footer,
+.footer{
+  background: var(--bg);
+  border-top: 1px solid var(--border);
+  padding: 16px 0;
+  font-size: 14px;
+  color: var(--subtext);
+}
+
+.site-footer .footer-inner{
+  width: min(1200px, 94vw);
+  margin: 0 auto;
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+.site-footer .footer-links{
+  display:flex;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+
+.site-footer a{
+  text-decoration:none;
+  color: var(--header);
+  font-weight: 700;
+}
+
+.site-footer a:hover{ text-decoration: underline; }
+
+/* ---------- RESPONSIVE BREAKPOINTS ---------- */
+@media (max-width: 980px){
+  .shop-product-grid{ grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .info-grid{ grid-template-columns: 1fr; }
+  .gallery-grid{ grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .contact-layout{ grid-template-columns: 1fr; }
+}
+
+@media (max-width: 650px){
+  .site-header .header-inner{ flex-direction:column; align-items:flex-start; }
+  .site-header .nav{ justify-content:flex-start; gap: 10px; }
+  .page-hero h1{ font-size: 30px; }
+  .page-hero p{ font-size: 16px; }
+  .gallery-grid{ grid-template-columns: 1fr; }
+  .shop-product-grid{ grid-template-columns: 1fr; }
+  .gallery-card img{ height: 210px; }
+}
