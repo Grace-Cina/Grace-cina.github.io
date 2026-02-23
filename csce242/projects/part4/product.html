@@ -4,15 +4,12 @@
   <title>First Day Milestone Board | Cina Designs & Events</title>
   <link rel="stylesheet" href="styles.css">
 </head>
-
 <body>
 
 <header class="header">
-  <div class="wrap header-inner">
-    <div class="brand">
-      <img class="logo" src="images/designs&events-logo.png" alt="Logo">
-    </div>
-
+  <div class="header-inner">
+    <img class="logo" src="images/designs&events-logo.png" alt="Logo">
+    <button class="nav-toggle" type="button">Menu</button>
     <nav class="nav">
       <a href="index.html">Home</a>
       <a href="about.html">About</a>
@@ -23,77 +20,56 @@
   </div>
 </header>
 
-<main class="page">
+<div class="topbar">
+  <div class="topbar-inner">
+    <a href="shop.html">← Back to Shop</a>
+    <a href="#">Cart →</a>
+  </div>
+</div>
 
-<section class="wrap" style="padding:40px 0;">
+<section class="product-layout">
+  <div class="p-block">
+    <h1 class="p-title">First Day Milestone Board</h1>
+    <div class="p-sub">Personalized Keepsake</div>
+    <div class="p-price">$45.00</div>
 
-  <div style="
-      display:grid;
-      grid-template-columns:1fr 1fr;
-      gap:30px;
-      align-items:start;
-  ">
+    <p class="p-desc">
+      A personalized keepsake designed to capture your child’s first day memories
+      in a timeless, handcrafted way.
+    </p>
 
-    <!-- PRODUCT IMAGE -->
-    <div>
-      <img src="images/first-day.jpg" alt="First Day Milestone Board">
-    </div>
+    <h2>Customization Options</h2>
+    <a class="p-pill" href="#">Child’s Name</a>
+    <a class="p-pill" href="#">Color</a>
+    <a class="p-pill" href="#">Date (Optional)</a>
 
-    <!-- PRODUCT INFO -->
-    <div>
-
-      <h1 style="color:var(--header); margin-top:0;">First Day Milestone Board</h1>
-
-      <div style="font-weight:800; color:var(--header); margin-bottom:14px;">
-        $45.00
-      </div>
-
-      <p>
-        A personalized keepsake designed to capture your child’s first day memories
-        in a timeless, handcrafted way.
-      </p>
-
-      <h3>Customization Options</h3>
-
-      <label>Child’s Name</label><br>
-      <input type="text" style="width:100%; padding:10px; margin:6px 0 12px;"><br>
-
-      <label>Color</label><br>
-      <input type="text" style="width:100%; padding:10px; margin:6px 0 12px;"><br>
-
-      <label>Date (optional)</label><br>
-      <input type="text" style="width:100%; padding:10px; margin:6px 0 18px;"><br>
-
-      <h3>Ordering Information</h3>
-
-      <ul>
-        <li>Made to order</li>
-        <li>3–5 business day processing time</li>
-        <li>Gift ready packaging available</li>
-      </ul>
-
-      <a class="btn btn-soft" href="shop.html">← Back to Shop</a>
-
-    </div>
-
+    <h2>Ordering Information</h2>
+    <ul class="p-list">
+      <li>Made to order</li>
+      <li>3–5 business day processing time</li>
+      <li>Gift-ready packaging available</li>
+    </ul>
   </div>
 
+  <div class="p-image">
+    <img src="images/first-day.jpg" alt="First Day Milestone Board">
+  </div>
 </section>
 
 <section class="cta">
-  <div class="wrap cta-inner">
-    <h2>Let’s Create Something Special</h2>
-    <p>Custom designs made with love for every occasion</p>
-    <a class="btn btn-pink" href="contact.html">Contact Us</a>
+  <h2>Let’s Create Something Special</h2>
+  <p class="sub">Custom designs made with love for every occasion</p>
+  <div class="btn-row">
+    <a class="btn" href="#">Add To Cart</a>
   </div>
+  <div style="margin-top:18px; color:var(--heading); font-weight:900;">Cina Designs &amp; Events</div>
+  <div style="font-size:11px;">Handcrafted with<br>love</div>
 </section>
 
-</main>
-
 <footer class="footer">
-  <div class="wrap footer-inner">
-    <div class="foot-left">© 2026 Cina Designs & Events</div>
-    <div class="foot-right">
+  <div class="footer-inner">
+    <div>© 2026 Cina Designs &amp; Events</div>
+    <div>
       <a href="index.html">Home</a>
       <a href="gallery.html">Gallery</a>
       <a href="contact.html">Contact</a>
@@ -101,5 +77,6 @@
   </div>
 </footer>
 
+<script src="nav.js"></script>
 </body>
 </html>
