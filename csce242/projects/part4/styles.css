@@ -86,7 +86,7 @@ h1,h2,h3{
 ========================= */
 /* Show lower part of banner image so Reserved sign is visible */
 .hero.banner-hero .hero-bg{
-  background-position:center 85%;
+  background-position:center 95%;
 }
 .hero{
   position:relative;
