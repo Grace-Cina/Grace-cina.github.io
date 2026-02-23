@@ -1,6 +1,3 @@
-/* =======================
-   THEME (HOMEPAGE COLORS)
-======================= */
 :root{
   --bg:#faf6f2;
   --subtext:#6b4f4f;
@@ -11,15 +8,6 @@
   --panel:#ffffff;
   --border:rgba(217,165,179,0.55);
   --shadow: 0 12px 30px rgba(0,0,0,0.10);
-
-  /* For gallery section that used different variable names */
-  --soft: var(--bg);
-  --pink: var(--nav);
-  --pink-dark: var(--header);
-  --text: var(--subtext);
-  --muted: var(--subtext);
-
-  --radius: 18px;
 }
 
 *{ box-sizing:border-box; }
@@ -33,18 +21,13 @@ body{
   line-height: 1.55;
 }
 
-img{
-  max-width: 100%;
-  display: block;
-}
-
 .wrap{
   width: min(1200px, 94vw);
   margin: 0 auto;
 }
 
 /* =======================
-   HEADER (HOMEPAGE STYLE)
+   HEADER
 ======================= */
 .header{
   background: var(--bg);
@@ -70,7 +53,6 @@ img{
   gap: 18px;
   flex-wrap: wrap;
   justify-content:flex-end;
-  align-items:center;
 }
 
 .nav a{
@@ -93,7 +75,7 @@ img{
 }
 
 /* =======================
-   HERO (HOMEPAGE)
+   HERO
 ======================= */
 .hero{
   position: relative;
@@ -105,6 +87,8 @@ img{
 .hero-img{
   position:absolute;
   inset:0;
+
+  /* ✅ teacher wanted scissors/craft image in hero */
   background-image: url("images/craft-background.png");
   background-size: cover;
   background-position: center;
@@ -158,24 +142,24 @@ img{
   border-radius: 999px;
   cursor: pointer;
   transition: 0.15s ease;
+}
+
+.btn-soft,
+.btn-pink{
   background: var(--button);
   color: var(--subtext);
   border: 1px solid var(--border);
   box-shadow: 0 4px 12px rgba(0,0,0,0.08);
 }
 
-.btn:hover{
+.btn-soft:hover,
+.btn-pink:hover{
   filter: brightness(0.97);
   transform: translateY(-1px);
 }
 
-.btn-small{
-  font-size: 12px;
-  padding: 7px 12px;
-}
-
 /* =======================
-   ABOUT BLOCK (HOMEPAGE)
+   ABOUT BLOCK
 ======================= */
 .about-block{
   background: var(--panel);
@@ -187,7 +171,6 @@ img{
   text-align:center;
   padding: 46px 0 44px;
   width: min(900px, 92vw);
-  margin: 0 auto;
 }
 
 .about-inner h2{
@@ -205,7 +188,7 @@ img{
 }
 
 /* =======================
-   PRODUCTS (HOMEPAGE)
+   PRODUCTS
 ======================= */
 .products{
   padding: 54px 0 62px;
@@ -257,13 +240,16 @@ img{
 }
 
 /* =======================
-   BANNER IMAGE (RESERVED)
+   BANNER IMAGE (RESERVED PIC)
 ======================= */
 .banner-img{
-  height: 340px;
+  height: 340px;                 /* slightly taller so more of photo shows */
   background-image: url("images/cina-event.jpg");
   background-size: cover;
+
+  /* SHIFT IMAGE DOWN so reserved sign is visible */
   background-position: center 85%;
+
   position: relative;
 }
 
@@ -271,12 +257,12 @@ img{
   content:"";
   position:absolute;
   inset:0;
-  background: rgba(250,246,242,0.10);
+  background: rgba(250,246,242,0.10);  /* lighter overlay so sign is clear */
   pointer-events:none;
 }
 
 /* =======================
-   CTA (HOMEPAGE)
+   CTA
 ======================= */
 .cta{
   background: var(--panel);
@@ -286,7 +272,6 @@ img{
 
 .cta-inner{
   width: min(900px, 92vw);
-  margin: 0 auto;
 }
 
 .cta h2{
@@ -318,7 +303,7 @@ img{
 }
 
 /* =======================
-   FOOTER (HOMEPAGE)
+   FOOTER
 ======================= */
 .footer{
   background: var(--bg);
@@ -334,8 +319,6 @@ img{
   align-items:center;
   gap: 12px;
   flex-wrap: wrap;
-  width: min(1200px, 94vw);
-  margin: 0 auto;
 }
 
 .foot-right{
@@ -355,7 +338,7 @@ img{
 }
 
 /* =======================
-   RESPONSIVE (HOMEPAGE)
+   RESPONSIVE
 ======================= */
 @media (max-width: 650px){
   .header-inner{
@@ -414,29 +397,32 @@ img{
     font-size: 16px;
   }
 }
-
 /* =======================
    ABOUT PAGE
 ======================= */
+
+/* HERO */
 .about-hero{
   position: relative;
   height: 420px;
   overflow: hidden;
   background: var(--bg);
-  border-bottom: 1px solid var(--border);
 }
 
 .about-hero-img{
-  position: absolute;
-  inset: 0;
-  background-image: url("images/about-hero.png");
+  position:absolute;
+  inset:0;
+
+  /* CHANGE this image name to your actual about hero image */
+  background-image: url("images/about-hero.jpg");
+
   background-size: cover;
   background-position: center;
   transform: scale(1.03);
 }
 
 .about-hero-overlay{
-  position: absolute;
+  position:absolute;
   left: 6%;
   top: 56%;
   transform: translateY(-50%);
@@ -447,45 +433,40 @@ img{
   border-radius: 16px;
   padding: 24px 24px;
   box-shadow: var(--shadow);
-  backdrop-filter: blur(4px);
-  -webkit-backdrop-filter: blur(4px);
 }
 
 .about-hero-overlay h1{
   margin: 0 0 10px;
   color: var(--header);
-  font-size: 44px;
+  font-size: 42px;
   font-weight: 800;
-  line-height: 1.1;
+  line-height: 1.15;
 }
 
-.about-hero-overlay .tagline{
+.about-hero-overlay h2{
   margin: 0 0 10px;
   font-size: 18px;
-  font-weight: 700;
   color: var(--subtext);
+  font-weight: 700;
 }
 
 .about-hero-overlay p{
   margin: 0 0 16px;
   font-size: 17px;
-  line-height: 1.7;
-  color: var(--subtext);
 }
 
-.story-section{
+/* OUR STORY */
+.story{
   background: var(--panel);
   border-top: 1px solid var(--border);
 }
 
 .story-inner{
-  display: flex;
+  display:flex;
   gap: 28px;
   align-items: center;
   padding: 46px 0;
   flex-wrap: wrap;
-  width: min(1200px, 94vw);
-  margin: 0 auto;
 }
 
 .story-text{
@@ -502,8 +483,7 @@ img{
 .story-text p{
   margin: 10px 0;
   font-size: 17px;
-  line-height: 1.75;
-  color: var(--subtext);
+  line-height: 1.7;
 }
 
 .story-img{
@@ -512,33 +492,35 @@ img{
   border-radius: 14px;
   border: 1px solid var(--border);
   box-shadow: var(--shadow);
-  background-image: url("images/making-ornaments.png");
+
+  /* CHANGE this image name to your actual story image */
+  background-image: url("images/about-story.jpg");
+
   background-size: cover;
   background-position: center;
 }
 
-.offers{
+/* WHAT WE OFFER */
+.offer{
   background: var(--bg);
-  padding: 52px 0 60px;
-  border-top: 1px solid var(--border);
+  padding: 50px 0 60px;
 }
 
 .offer-grid{
-  display: flex;
-  justify-content: center;
+  display:flex;
+  justify-content:center;
   gap: 28px;
   flex-wrap: wrap;
-  margin-top: 18px;
 }
 
 .offer-card{
-  width: 290px;
+  width: 280px;
   background: var(--panel);
   border: 1px solid var(--border);
   border-radius: 14px;
-  overflow: hidden;
+  overflow:hidden;
   box-shadow: var(--shadow);
-  text-align: center;
+  text-align:center;
 }
 
 .offer-img{
@@ -556,38 +538,25 @@ img{
   padding: 14px 10px;
   font-weight: 800;
   color: var(--subtext);
-  font-size: 16px;
 }
 
-.offer-card p{
-  padding: 14px 16px 18px;
+.offer-text{
+  padding: 14px 14px 18px;
   margin: 0;
   font-size: 16px;
   line-height: 1.6;
-  color: var(--subtext);
 }
 
+/* WHY CHOOSE OVAL */
 .why{
   background: var(--panel);
   border-top: 1px solid var(--border);
-  padding: 46px 0 56px;
-  text-align: center;
+  padding: 44px 0 54px;
+  text-align:center;
 }
 
-.why-inner{
-  width: min(900px, 92vw);
-  margin: 0 auto;
-}
-
-.why h2{
-  margin: 0 0 18px;
-  color: var(--header);
-  font-size: 30px;
-  font-weight: 800;
-}
-
-.why-bubble{
-  margin: 0 auto;
+.why-oval{
+  margin: 18px auto 0;
   width: min(520px, 92vw);
   background: rgba(217,165,179,0.18);
   border: 1px solid var(--border);
@@ -595,38 +564,32 @@ img{
   padding: 22px 18px;
 }
 
-.why-bubble p{
+.why-oval p{
   margin: 6px 0;
   font-size: 16px;
-  color: var(--subtext);
 }
 
-@media (max-width: 750px){
+/* RESPONSIVE */
+@media (max-width: 650px){
   .about-hero{ height: 520px; }
 
   .about-hero-overlay{
     left: 50%;
     top: 62%;
     transform: translate(-50%, -50%);
-    text-align: center;
+    text-align:center;
   }
 
-  .about-hero-overlay h1{
-    font-size: 34px;
-  }
+  .about-hero-overlay h1{ font-size: 34px; }
 
-  .story-img{
-    height: 240px;
-  }
+  .story-img{ height: 240px; }
 
-  .offer-card{
-    width: min(360px, 92vw);
-  }
+  .offer-card{ width: min(340px, 92vw); }
 }
-
 /* =======================
    SHOP PAGE
 ======================= */
+
 .page-hero{
   background: var(--bg);
   padding: 26px 0 10px;
@@ -649,6 +612,7 @@ img{
   color: var(--subtext);
 }
 
+/* toolbar bar */
 .shop-toolbar{
   background: var(--nav);
   border-top: 1px solid var(--border);
@@ -661,11 +625,10 @@ img{
   align-items:center;
   padding: 10px 0;
   font-size: 14px;
-  color: var(--subtext);
-  width: min(1200px, 94vw);
-  margin: 0 auto;
+  color: #6b4f4f;
 }
 
+/* grid wrapper */
 .shop-grid{
   padding: 22px 0 28px;
   background: var(--bg);
@@ -675,9 +638,10 @@ img{
   gap: 22px;
 }
 
+/* shop product cards */
 .shop-card{
   width: 210px;
-  background: var(--bg);
+  background: #faf6f2;
   border: 1px solid var(--border);
   border-radius: 16px;
   overflow:hidden;
@@ -699,16 +663,22 @@ img{
 .shop-info h3{
   margin: 0 0 6px;
   font-size: 14px;
-  color: var(--subtext);
+  color: #6b4f4f;
   font-weight: 700;
 }
 
 .price{
   font-size: 13px;
-  color: var(--subtext);
+  color: #6b4f4f;
   margin-bottom: 10px;
 }
 
+.btn-small{
+  font-size: 12px;
+  padding: 7px 12px;
+}
+
+/* Product images (your exact filenames) */
 .p1{ background-image: url("images/ballerina.jpg"); }
 .p2{ background-image: url("images/zoomed-in-wreath-sash.jpg"); }
 .p3{ background-image: url("images/starwars-milestone.jpg"); }
@@ -718,6 +688,7 @@ img{
 .p7{ background-image: url("images/cutting-boards.jpg"); }
 .p8{ background-image: url("images/first-day.jpg"); }
 
+/* info section */
 .shop-info-section{
   padding: 18px 0 10px;
   background: var(--bg);
@@ -743,7 +714,7 @@ img{
 
 .info-card h3{
   margin: 0 0 8px;
-  color: var(--subtext);
+  color: #6b4f4f;
   font-size: 14px;
   font-weight: 800;
 }
@@ -752,9 +723,10 @@ img{
   margin: 0;
   font-size: 13px;
   line-height: 1.45;
-  color: var(--subtext);
+  color: #6b4f4f;
 }
 
+/* ✅ “blank pink spot” becomes an order-steps card */
 .info-card-steps{
   width: 240px;
 }
@@ -777,7 +749,7 @@ img{
   width: 28px;
   height: 28px;
   border-radius: 50%;
-  background: var(--bg);
+  background: #faf6f2;
   border: 1px solid var(--border);
   display:flex;
   align-items:center;
@@ -788,28 +760,49 @@ img{
 
 .step-text{
   font-size: 13px;
-  color: var(--subtext);
+  color: #6b4f4f;
   font-weight: 700;
 }
 
+/* responsive */
 @media (max-width: 700px){
   .page-hero h1{ font-size: 28px; }
   .shop-card{ width: min(360px, 92vw); }
   .shop-img{ height: 180px; }
   .info-card{ width: min(360px, 92vw); }
 }
+/* ---------- Base ---------- */
+:root{
+  --bg: #fbf4ef;
+  --panel: #fff;
+  --soft: #f7e9e6;
+  --pink: #f3b8c9;
+  --pink-dark: #d991a8;
+  --text: #3a3336;
+  --muted: #6b5f64;
+  --shadow: 0 10px 25px rgba(0,0,0,.08);
+  --radius: 18px;
+}
 
-/* =======================
-   GALLERY PAGE (MATCHED)
-======================= */
+*{ box-sizing: border-box; }
 
-/* These classes are for your gallery layout.
-   Colors now match homepage because vars match. */
+body{
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  color: var(--text);
+  background: var(--bg);
+}
 
+img{
+  max-width: 100%;
+  display: block;
+}
+
+/* ---------- Header / Nav ---------- */
 .site-header{
-  background: rgba(250,246,242,.85);
-  border-bottom: 1px solid var(--border);
+  background: rgba(255,255,255,.75);
   backdrop-filter: blur(8px);
+  border-bottom: 1px solid rgba(0,0,0,.05);
 }
 
 .header-inner{
@@ -827,6 +820,31 @@ img{
   width: auto;
 }
 
+.nav{
+  display: flex;
+  gap: 18px;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.nav a{
+  text-decoration: none;
+  color: var(--pink-dark);
+  padding: 10px 16px;
+  border-radius: 999px;
+  font-size: 16px;
+}
+
+.nav a:hover{
+  background: rgba(243,184,201,.35);
+}
+
+.nav a.active{
+  background: rgba(243,184,201,.7);
+  color: #553a43;
+}
+
+/* ---------- Page Layout ---------- */
 .page{
   width: min(1100px, 92%);
   margin: 0 auto;
@@ -837,22 +855,30 @@ img{
   padding: 50px 0;
 }
 
+.section-title{
+  text-align: center;
+  margin: 0 0 10px;
+  color: var(--pink-dark);
+  font-size: 40px;
+  letter-spacing: .5px;
+}
+
 .section-subtitle{
   text-align: center;
   margin: 0 0 35px;
-  color: var(--subtext);
+  color: var(--muted);
   font-size: 18px;
 }
 
-/* Hero */
+/* ---------- Hero ---------- */
 .page-hero{
   position: relative;
   height: 300px;
   overflow: hidden;
 }
 
-/* IMPORTANT: use your gallery hero image filename here */
 .page-hero--gallery{
+  /* IMPORTANT: update this filename to match your real hero image */
   background-image: url("images/about-hero.png");
   background-size: cover;
   background-position: center;
@@ -865,23 +891,23 @@ img{
   place-content: center;
   text-align: center;
   padding: 20px;
-  background: rgba(250,246,242,.55);
+  background: rgba(255,255,255,.45);
 }
 
 .hero-overlay h1{
   margin: 0;
   font-size: 64px;
-  color: var(--header);
+  color: var(--pink-dark);
   font-weight: 800;
 }
 
 .hero-overlay p{
   margin: 8px 0 0;
   font-size: 18px;
-  color: var(--subtext);
+  color: #7a616a;
 }
 
-/* Gallery Grid */
+/* ---------- Gallery Grid ---------- */
 .gallery-grid{
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -890,18 +916,18 @@ img{
 }
 
 .gallery-card{
-  background: var(--panel);
+  background: rgba(255,255,255,.55);
   border-radius: var(--radius);
   box-shadow: var(--shadow);
   overflow: hidden;
-  border: 1px solid var(--border);
-  height: 190px;
+  border: 1px solid rgba(0,0,0,.05);
+  height: 190px; /* matches the screenshot look */
 }
 
 .gallery-card img{
   width: 100%;
   height: 100%;
-  object-fit: cover;
+  object-fit: cover;        /* THIS is the key */
   object-position: center;
   transition: transform .25s ease;
 }
@@ -910,10 +936,47 @@ img{
   transform: scale(1.03);
 }
 
-/* CTA */
+/* ---------- CTA ---------- */
+.cta{
+  margin-top: 35px;
+  padding: 55px 18px;
+  text-align: center;
+  background: rgba(255,255,255,.65);
+  border-top: 1px solid rgba(0,0,0,.05);
+  border-bottom: 1px solid rgba(0,0,0,.05);
+}
+
+.cta h2{
+  margin: 0 0 10px;
+  color: var(--pink-dark);
+  font-size: 44px;
+}
+
+.cta p{
+  margin: 0 0 20px;
+  color: var(--muted);
+  font-size: 18px;
+}
+
+.btn{
+  display: inline-block;
+  text-decoration: none;
+  background: rgba(243,184,201,.9);
+  color: #553a43;
+  padding: 12px 22px;
+  border-radius: 999px;
+  font-size: 16px;
+  box-shadow: 0 10px 20px rgba(0,0,0,.08);
+}
+
+.btn:hover{
+  background: rgba(243,184,201,1);
+}
+
+/* ---------- Footer ---------- */
 .site-footer{
   padding: 18px 0;
-  color: var(--subtext);
+  color: #7a616a;
 }
 
 .footer-inner{
@@ -923,16 +986,17 @@ img{
   justify-content: space-between;
   gap: 14px;
   flex-wrap: wrap;
-  border-top: 1px solid var(--border);
+  border-top: 1px solid rgba(0,0,0,.08);
   padding-top: 16px;
 }
 
 .footer-links a{
   margin-left: 12px;
   text-decoration: none;
-  color: var(--header);
+  color: var(--pink-dark);
 }
 
+/* ---------- Responsive ---------- */
 @media (max-width: 900px){
   .gallery-grid{ grid-template-columns: repeat(2, 1fr); }
   .hero-overlay h1{ font-size: 52px; }
