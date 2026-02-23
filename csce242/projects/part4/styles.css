@@ -1,6 +1,6 @@
 :root{
   --bg:#f7f1ec;
-  --panel:#ffffff;
+  --panel:#f7f1ec;
   --text:#6b4f4f;
 
   --pink:#f4c2d7;
@@ -84,6 +84,10 @@ h1,h2,h3{
 /* =========================
    PAGE HERO (About/Gallery/Shop feel)
 ========================= */
+/* Show lower part of banner image so Reserved sign is visible */
+.hero.banner-hero .hero-bg{
+  background-position:center 85%;
+}
 .hero{
   position:relative;
   min-height:360px;
