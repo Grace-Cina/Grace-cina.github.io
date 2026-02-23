@@ -806,3 +806,66 @@ body{
   .shop-img{ height: 180px; }
   .info-card{ width: min(360px, 92vw); }
 }
+/* =======================
+   GALLERY PAGE ONLY
+======================= */
+
+/* HERO banner for gallery */
+.hero-gallery{
+  background: url("images/about-hero.png") center/cover no-repeat;
+  text-align: center;
+  padding: 100px 20px;
+  color: var(--header);
+}
+
+.hero-gallery h1{
+  font-size: 48px;
+  margin: 0;
+}
+
+.hero-gallery p{
+  font-size: 18px;
+  margin-top: 8px;
+}
+
+/* Gallery section */
+.gallery{
+  padding: 60px 40px;
+  text-align: center;
+  background: var(--bg);
+}
+
+.gallery h2{
+  color: var(--header);
+  font-size: 28px;
+  margin-bottom: 10px;
+}
+
+.gallery .subtitle{
+  color: var(--subtext);
+  margin-bottom: 30px;
+  font-size: 16px;
+}
+
+/* Grid layout */
+.gallery-grid{
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 25px;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+/* Images */
+.gallery-grid img{
+  width: 100%;
+  height: 230px;
+  object-fit: cover;
+  border-radius: 12px;
+  box-shadow: var(--shadow);
+  transition: transform 0.25s ease;
+}
+
+.gallery-grid img:hover{
+  transform: scale(1.04);
+}
