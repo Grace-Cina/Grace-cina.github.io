@@ -1,63 +1,105 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <title>Gallery | Cina Designs & Events</title>
-    <link rel="stylesheet" href="styles.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Gallery | Cina Designs & Events</title>
+  <link rel="stylesheet" href="styles.css" />
 </head>
 
 <body>
+  <!-- Header / Nav -->
+  <header class="site-header">
+    <div class="header-inner">
+      <!-- IMPORTANT: update this filename to match your real logo file -->
+      <a class="brand" href="index.html">
+        <img class="brand-logo" src="images/logo.png" alt="Cina Designs Logo" />
+      </a>
 
-<header class="site-header">
-    <img src="images/logo.png" alt="Cina Designs Logo" class="logo">
-
-    <nav class="nav">
+      <nav class="nav">
         <a href="index.html">Home</a>
         <a href="about.html">About</a>
         <a href="shop.html">Shop</a>
         <a class="active" href="gallery.html">Gallery</a>
         <a href="contact.html">Contact</a>
-    </nav>
-</header>
-
-<!-- HERO -->
-<section class="hero hero-gallery">
-    <h1>Gallery</h1>
-    <p>A collection of custom, handmade designs</p>
-</section>
-
-<!-- GALLERY GRID -->
-<section class="gallery">
-
-    <h2>Featured Designs</h2>
-    <p class="subtitle">A curated look at some of our favorite custom pieces.</p>
-
-    <div class="gallery-grid">
-
-        <img src="images/space.jpg">
-        <img src="images/bunny.webp">
-        <img src="images/recipe.webp">
-        <img src="images/wood.webp">
-        <img src="images/house-divided.jpg">
-        <img src="images/ornament.jpg">
-        <img src="images/hair-brush.jpg">
-        <img src="images/flower-holder.jpg">
-        <img src="images/boo.jpg">
-
+      </nav>
     </div>
+  </header>
 
-</section>
+  <!-- Hero -->
+  <section class="page-hero page-hero--gallery">
+    <div class="hero-overlay">
+      <h1>Gallery</h1>
+      <p>A collection of custom, handmade designs</p>
+    </div>
+  </section>
 
-<!-- CTA -->
-<section class="cta">
-    <h2>Interested in Something Special?</h2>
-    <p>We’d love to create something just for you.</p>
-    <a href="contact.html" class="btn">Contact Us</a>
-</section>
+  <!-- Featured -->
+  <main class="page">
+    <section class="section">
+      <h2 class="section-title">Featured Designs</h2>
+      <p class="section-subtitle">A curated look at some of our favorite custom pieces.</p>
 
-<footer>
-    <p>Cina Designs & Events</p>
-    <p>Handcrafted with love</p>
-</footer>
+      <div class="gallery-grid">
+        <!-- Row 1 -->
+        <article class="gallery-card">
+          <img src="images/space.jpg" alt="Monthly milestone ornaments" />
+        </article>
 
+        <article class="gallery-card">
+          <img src="images/zoomed-in-wreath-sash.jpg" alt="Wreath sash" />
+        </article>
+
+        <article class="gallery-card">
+          <img src="images/recipe.webp" alt="Engraved cutting board recipe" />
+        </article>
+
+        <!-- Row 2 -->
+        <article class="gallery-card">
+          <img src="images/wood.webp" alt="Family name wood sign" />
+        </article>
+
+        <article class="gallery-card">
+          <img src="images/house-divided.jpg" alt="House divided decor" />
+        </article>
+
+        <article class="gallery-card">
+          <img src="images/ornament.jpg" alt="Dog ornament" />
+        </article>
+
+        <!-- Row 3 -->
+        <article class="gallery-card">
+          <img src="images/hair-brush.jpg" alt="Personalized brush" />
+        </article>
+
+        <article class="gallery-card">
+          <img src="images/flower-holder.jpg" alt="Flower arrangement holder" />
+        </article>
+
+        <article class="gallery-card">
+          <img src="images/boo.jpg" alt="Custom sweatshirt" />
+        </article>
+      </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="cta">
+      <h2>Interested in Something Special?</h2>
+      <p>We’d love to create something just for you.</p>
+      <a class="btn" href="contact.html">Contact Us</a>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="site-footer">
+    <div class="footer-inner">
+      <p>© 2026 Cina Designs & Events</p>
+      <div class="footer-links">
+        <a href="index.html">Home</a>
+        <a href="gallery.html">Gallery</a>
+        <a href="contact.html">Contact</a>
+      </div>
+    </div>
+  </footer>
 </body>
 </html>

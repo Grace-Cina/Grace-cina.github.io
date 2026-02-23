@@ -1,3 +1,6 @@
+/* =======================
+   THEME (HOMEPAGE COLORS)
+======================= */
 :root{
   --bg:#faf6f2;
   --subtext:#6b4f4f;
@@ -8,6 +11,15 @@
   --panel:#ffffff;
   --border:rgba(217,165,179,0.55);
   --shadow: 0 12px 30px rgba(0,0,0,0.10);
+
+  /* For gallery section that used different variable names */
+  --soft: var(--bg);
+  --pink: var(--nav);
+  --pink-dark: var(--header);
+  --text: var(--subtext);
+  --muted: var(--subtext);
+
+  --radius: 18px;
 }
 
 *{ box-sizing:border-box; }
@@ -21,13 +33,18 @@ body{
   line-height: 1.55;
 }
 
+img{
+  max-width: 100%;
+  display: block;
+}
+
 .wrap{
   width: min(1200px, 94vw);
   margin: 0 auto;
 }
 
 /* =======================
-   HEADER
+   HEADER (HOMEPAGE STYLE)
 ======================= */
 .header{
   background: var(--bg);
@@ -53,6 +70,7 @@ body{
   gap: 18px;
   flex-wrap: wrap;
   justify-content:flex-end;
+  align-items:center;
 }
 
 .nav a{
@@ -75,7 +93,7 @@ body{
 }
 
 /* =======================
-   HERO
+   HERO (HOMEPAGE)
 ======================= */
 .hero{
   position: relative;
@@ -87,8 +105,6 @@ body{
 .hero-img{
   position:absolute;
   inset:0;
-
-  /* ✅ teacher wanted scissors/craft image in hero */
   background-image: url("images/craft-background.png");
   background-size: cover;
   background-position: center;
@@ -142,24 +158,24 @@ body{
   border-radius: 999px;
   cursor: pointer;
   transition: 0.15s ease;
-}
-
-.btn-soft,
-.btn-pink{
   background: var(--button);
   color: var(--subtext);
   border: 1px solid var(--border);
   box-shadow: 0 4px 12px rgba(0,0,0,0.08);
 }
 
-.btn-soft:hover,
-.btn-pink:hover{
+.btn:hover{
   filter: brightness(0.97);
   transform: translateY(-1px);
 }
 
+.btn-small{
+  font-size: 12px;
+  padding: 7px 12px;
+}
+
 /* =======================
-   ABOUT BLOCK
+   ABOUT BLOCK (HOMEPAGE)
 ======================= */
 .about-block{
   background: var(--panel);
@@ -171,6 +187,7 @@ body{
   text-align:center;
   padding: 46px 0 44px;
   width: min(900px, 92vw);
+  margin: 0 auto;
 }
 
 .about-inner h2{
@@ -188,7 +205,7 @@ body{
 }
 
 /* =======================
-   PRODUCTS
+   PRODUCTS (HOMEPAGE)
 ======================= */
 .products{
   padding: 54px 0 62px;
@@ -240,16 +257,13 @@ body{
 }
 
 /* =======================
-   BANNER IMAGE (RESERVED PIC)
+   BANNER IMAGE (RESERVED)
 ======================= */
 .banner-img{
-  height: 340px;                 /* slightly taller so more of photo shows */
+  height: 340px;
   background-image: url("images/cina-event.jpg");
   background-size: cover;
-
-  /* SHIFT IMAGE DOWN so reserved sign is visible */
   background-position: center 85%;
-
   position: relative;
 }
 
@@ -257,12 +271,12 @@ body{
   content:"";
   position:absolute;
   inset:0;
-  background: rgba(250,246,242,0.10);  /* lighter overlay so sign is clear */
+  background: rgba(250,246,242,0.10);
   pointer-events:none;
 }
 
 /* =======================
-   CTA
+   CTA (HOMEPAGE)
 ======================= */
 .cta{
   background: var(--panel);
@@ -272,6 +286,7 @@ body{
 
 .cta-inner{
   width: min(900px, 92vw);
+  margin: 0 auto;
 }
 
 .cta h2{
@@ -303,7 +318,7 @@ body{
 }
 
 /* =======================
-   FOOTER
+   FOOTER (HOMEPAGE)
 ======================= */
 .footer{
   background: var(--bg);
@@ -319,6 +334,8 @@ body{
   align-items:center;
   gap: 12px;
   flex-wrap: wrap;
+  width: min(1200px, 94vw);
+  margin: 0 auto;
 }
 
 .foot-right{
@@ -338,7 +355,7 @@ body{
 }
 
 /* =======================
-   RESPONSIVE
+   RESPONSIVE (HOMEPAGE)
 ======================= */
 @media (max-width: 650px){
   .header-inner{
@@ -397,11 +414,10 @@ body{
     font-size: 16px;
   }
 }
+
 /* =======================
    ABOUT PAGE
 ======================= */
-
-/* ---------- ABOUT HERO ---------- */
 .about-hero{
   position: relative;
   height: 420px;
@@ -413,17 +429,12 @@ body{
 .about-hero-img{
   position: absolute;
   inset: 0;
-
-  /* your exact hero image */
   background-image: url("images/about-hero.png");
   background-size: cover;
-
-  /* move this if you want different focus */
   background-position: center;
   transform: scale(1.03);
 }
 
-/* soft overlay like your homepage */
 .about-hero-overlay{
   position: absolute;
   left: 6%;
@@ -462,8 +473,6 @@ body{
   color: var(--subtext);
 }
 
-
-/* ---------- OUR STORY ---------- */
 .story-section{
   background: var(--panel);
   border-top: 1px solid var(--border);
@@ -475,6 +484,8 @@ body{
   align-items: center;
   padding: 46px 0;
   flex-wrap: wrap;
+  width: min(1200px, 94vw);
+  margin: 0 auto;
 }
 
 .story-text{
@@ -495,23 +506,17 @@ body{
   color: var(--subtext);
 }
 
-/* your exact story image */
 .story-img{
   flex: 1 1 420px;
   height: 280px;
   border-radius: 14px;
   border: 1px solid var(--border);
   box-shadow: var(--shadow);
-
   background-image: url("images/making-ornaments.png");
   background-size: cover;
-
-  /* adjust to focus faces */
   background-position: center;
 }
 
-
-/* ---------- WHAT WE OFFER ---------- */
 .offers{
   background: var(--bg);
   padding: 52px 0 60px;
@@ -562,8 +567,6 @@ body{
   color: var(--subtext);
 }
 
-
-/* ---------- WHY CHOOSE ---------- */
 .why{
   background: var(--panel);
   border-top: 1px solid var(--border);
@@ -573,6 +576,7 @@ body{
 
 .why-inner{
   width: min(900px, 92vw);
+  margin: 0 auto;
 }
 
 .why h2{
@@ -597,8 +601,6 @@ body{
   color: var(--subtext);
 }
 
-
-/* ---------- RESPONSIVE ---------- */
 @media (max-width: 750px){
   .about-hero{ height: 520px; }
 
@@ -621,10 +623,10 @@ body{
     width: min(360px, 92vw);
   }
 }
+
 /* =======================
    SHOP PAGE
 ======================= */
-
 .page-hero{
   background: var(--bg);
   padding: 26px 0 10px;
@@ -647,7 +649,6 @@ body{
   color: var(--subtext);
 }
 
-/* toolbar bar */
 .shop-toolbar{
   background: var(--nav);
   border-top: 1px solid var(--border);
@@ -660,10 +661,11 @@ body{
   align-items:center;
   padding: 10px 0;
   font-size: 14px;
-  color: #6b4f4f;
+  color: var(--subtext);
+  width: min(1200px, 94vw);
+  margin: 0 auto;
 }
 
-/* grid wrapper */
 .shop-grid{
   padding: 22px 0 28px;
   background: var(--bg);
@@ -673,10 +675,9 @@ body{
   gap: 22px;
 }
 
-/* shop product cards */
 .shop-card{
   width: 210px;
-  background: #faf6f2;
+  background: var(--bg);
   border: 1px solid var(--border);
   border-radius: 16px;
   overflow:hidden;
@@ -698,22 +699,16 @@ body{
 .shop-info h3{
   margin: 0 0 6px;
   font-size: 14px;
-  color: #6b4f4f;
+  color: var(--subtext);
   font-weight: 700;
 }
 
 .price{
   font-size: 13px;
-  color: #6b4f4f;
+  color: var(--subtext);
   margin-bottom: 10px;
 }
 
-.btn-small{
-  font-size: 12px;
-  padding: 7px 12px;
-}
-
-/* Product images (your exact filenames) */
 .p1{ background-image: url("images/ballerina.jpg"); }
 .p2{ background-image: url("images/zoomed-in-wreath-sash.jpg"); }
 .p3{ background-image: url("images/starwars-milestone.jpg"); }
@@ -723,7 +718,6 @@ body{
 .p7{ background-image: url("images/cutting-boards.jpg"); }
 .p8{ background-image: url("images/first-day.jpg"); }
 
-/* info section */
 .shop-info-section{
   padding: 18px 0 10px;
   background: var(--bg);
@@ -749,7 +743,7 @@ body{
 
 .info-card h3{
   margin: 0 0 8px;
-  color: #6b4f4f;
+  color: var(--subtext);
   font-size: 14px;
   font-weight: 800;
 }
@@ -758,10 +752,9 @@ body{
   margin: 0;
   font-size: 13px;
   line-height: 1.45;
-  color: #6b4f4f;
+  color: var(--subtext);
 }
 
-/* ✅ “blank pink spot” becomes an order-steps card */
 .info-card-steps{
   width: 240px;
 }
@@ -784,7 +777,7 @@ body{
   width: 28px;
   height: 28px;
   border-radius: 50%;
-  background: #faf6f2;
+  background: var(--bg);
   border: 1px solid var(--border);
   display:flex;
   align-items:center;
@@ -795,77 +788,158 @@ body{
 
 .step-text{
   font-size: 13px;
-  color: #6b4f4f;
+  color: var(--subtext);
   font-weight: 700;
 }
 
-/* responsive */
 @media (max-width: 700px){
   .page-hero h1{ font-size: 28px; }
   .shop-card{ width: min(360px, 92vw); }
   .shop-img{ height: 180px; }
   .info-card{ width: min(360px, 92vw); }
 }
+
 /* =======================
-   GALLERY PAGE ONLY
+   GALLERY PAGE (MATCHED)
 ======================= */
 
-/* HERO banner for gallery */
-.hero-gallery{
-  background: url("images/about-hero.png") center/cover no-repeat;
+/* These classes are for your gallery layout.
+   Colors now match homepage because vars match. */
+
+.site-header{
+  background: rgba(250,246,242,.85);
+  border-bottom: 1px solid var(--border);
+  backdrop-filter: blur(8px);
+}
+
+.header-inner{
+  width: min(1100px, 92%);
+  margin: 0 auto;
+  padding: 16px 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+}
+
+.brand-logo{
+  height: 42px;
+  width: auto;
+}
+
+.page{
+  width: min(1100px, 92%);
+  margin: 0 auto;
+  padding: 40px 0 70px;
+}
+
+.section{
+  padding: 50px 0;
+}
+
+.section-subtitle{
   text-align: center;
-  padding: 100px 20px;
-  color: var(--header);
-}
-
-.hero-gallery h1{
-  font-size: 48px;
-  margin: 0;
-}
-
-.hero-gallery p{
-  font-size: 18px;
-  margin-top: 8px;
-}
-
-/* Gallery section */
-.gallery{
-  padding: 60px 40px;
-  text-align: center;
-  background: var(--bg);
-}
-
-.gallery h2{
-  color: var(--header);
-  font-size: 28px;
-  margin-bottom: 10px;
-}
-
-.gallery .subtitle{
+  margin: 0 0 35px;
   color: var(--subtext);
-  margin-bottom: 30px;
-  font-size: 16px;
+  font-size: 18px;
 }
 
-/* Grid layout */
+/* Hero */
+.page-hero{
+  position: relative;
+  height: 300px;
+  overflow: hidden;
+}
+
+/* IMPORTANT: use your gallery hero image filename here */
+.page-hero--gallery{
+  background-image: url("images/about-hero.png");
+  background-size: cover;
+  background-position: center;
+}
+
+.hero-overlay{
+  position: absolute;
+  inset: 0;
+  display: grid;
+  place-content: center;
+  text-align: center;
+  padding: 20px;
+  background: rgba(250,246,242,.55);
+}
+
+.hero-overlay h1{
+  margin: 0;
+  font-size: 64px;
+  color: var(--header);
+  font-weight: 800;
+}
+
+.hero-overlay p{
+  margin: 8px 0 0;
+  font-size: 18px;
+  color: var(--subtext);
+}
+
+/* Gallery Grid */
 .gallery-grid{
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  gap: 25px;
-  max-width: 1100px;
-  margin: 0 auto;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 26px;
+  align-items: stretch;
 }
 
-/* Images */
-.gallery-grid img{
-  width: 100%;
-  height: 230px;
-  object-fit: cover;
-  border-radius: 12px;
+.gallery-card{
+  background: var(--panel);
+  border-radius: var(--radius);
   box-shadow: var(--shadow);
-  transition: transform 0.25s ease;
+  overflow: hidden;
+  border: 1px solid var(--border);
+  height: 190px;
 }
 
-.gallery-grid img:hover{
-  transform: scale(1.04);
+.gallery-card img{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  transition: transform .25s ease;
+}
+
+.gallery-card:hover img{
+  transform: scale(1.03);
+}
+
+/* CTA */
+.site-footer{
+  padding: 18px 0;
+  color: var(--subtext);
+}
+
+.footer-inner{
+  width: min(1100px, 92%);
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  gap: 14px;
+  flex-wrap: wrap;
+  border-top: 1px solid var(--border);
+  padding-top: 16px;
+}
+
+.footer-links a{
+  margin-left: 12px;
+  text-decoration: none;
+  color: var(--header);
+}
+
+@media (max-width: 900px){
+  .gallery-grid{ grid-template-columns: repeat(2, 1fr); }
+  .hero-overlay h1{ font-size: 52px; }
+}
+
+@media (max-width: 560px){
+  .gallery-grid{ grid-template-columns: 1fr; }
+  .hero-overlay h1{ font-size: 44px; }
+  .gallery-card{ height: 210px; }
 }
