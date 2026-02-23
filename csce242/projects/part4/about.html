@@ -1,176 +1,116 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
   <title>About | Cina Designs & Events</title>
   <link rel="stylesheet" href="styles.css">
 </head>
-
 <body>
 
 <header class="header">
-  <div class="wrap header-inner">
-
-    <div class="brand">
-      <img class="logo" src="images/designs&events-logo.png" alt="Logo">
-    </div>
-
+  <div class="header-inner">
+    <img src="images/designs-events-logo.png" class="logo" alt="Logo">
     <nav class="nav">
       <a href="index.html">Home</a>
-      <a class="active" href="about.html">About</a>
+      <a href="about.html" class="active">About</a>
       <a href="shop.html">Shop</a>
       <a href="gallery.html">Gallery</a>
       <a href="contact.html">Contact</a>
     </nav>
-
   </div>
 </header>
 
-
-<main>
-
 <!-- HERO -->
-<section class="about-hero">
+<section class="hero">
+  <div class="hero-bg" style="background-image:url('images/about-hero.png');"></div>
 
-  <div class="about-hero-img"
-       style="background-image:url('images/about-hero.png');"></div>
-
-  <div class="about-hero-overlay">
-    <h1>About Cina Designs & Events</h1>
-    <p class="tagline">Handcrafted with love by a mother-daughter team</p>
-
-    <p>
-      We believe every special moment deserves a personal touch. From custom décor
-      to meaningful keepsakes, we create handcrafted designs that celebrate life’s
-      most cherished occasions.
-    </p>
-
-    <a class="btn btn-soft" href="contact.html">Contact Us</a>
+  <div class="hero-overlay">
+    <div class="card">
+      <h1>About Cina Designs & Events</h1>
+      <p>Handcrafted with love by a mother-daughter team.</p>
+      <div class="btn-row">
+        <a href="contact.html" class="btn">Contact Us</a>
+      </div>
+    </div>
   </div>
-
 </section>
-
 
 <!-- OUR STORY -->
-<section class="story-section">
-
-  <div class="wrap story-inner">
-
-    <div class="story-text">
+<section class="section">
+  <div class="wrap" style="display:grid; grid-template-columns:1fr 1fr; gap:30px; align-items:center;">
+    
+    <div>
       <h2>Our Story</h2>
-
       <p>
-        Cina Designs & Events began as a shared passion between a mother and daughter
-        who love creating meaningful, handmade pieces for the people they care about.
-        What started as a small hobby quickly grew into a small business dedicated to
-        turning heartfelt ideas into beautiful designs.
+        Cina Designs & Events began as a shared passion between a mother and daughter who love creating meaningful, handmade pieces for the people they care about.
       </p>
-
       <p>
-        Each piece is thoughtfully designed and carefully crafted with attention to
-        detail, quality materials, and lots of love. We take pride in creating items
-        that become part of your home, celebrations, and memories.
+        What started as a small hobby quickly grew into a small business dedicated to turning heartfelt ideas into beautiful designs.
+      </p>
+      <p>
+        Each piece is thoughtfully designed and carefully crafted with attention to detail, quality materials, and lots of love.
       </p>
     </div>
 
-    <!-- using your engraving photo -->
-    <div class="story-img"
-         style="background-image:url('images/making-ornaments.png');"></div>
+    <div>
+      <img src="images/making-ornaments.png" alt="Making ornaments" style="border-radius:18px; box-shadow:var(--shadow);">
+    </div>
 
   </div>
-
 </section>
-
 
 <!-- WHAT WE OFFER -->
-<section class="offers">
-
+<section class="section center">
   <div class="wrap">
+    <h2>What We Offer</h2>
 
-    <h2 class="section-title">What We Offer</h2>
+    <div class="grid-3">
 
-    <div class="offer-grid">
+      <div class="card-item">
+        <div class="card-img" style="background-image:url('images/home-decor.png');"></div>
+        <div class="card-bottom">
+          <h3>Custom Home Décor</h3>
+          <p>Personalized pieces designed to add warmth and character to your space.</p>
+        </div>
+      </div>
 
-      <article class="offer-card">
-        <div class="offer-img"
-             style="background-image:url('images/home-decor.png');"></div>
-        <div class="offer-label">Custom Home Décor</div>
-        <p>Personalized pieces designed to add warmth and character to your space.</p>
-      </article>
+      <div class="card-item">
+        <div class="card-img" style="background-image:url('images/milestone-memories.png');"></div>
+        <div class="card-bottom">
+          <h3>Keepsakes & Gifts</h3>
+          <p>Meaningful creations perfect for weddings, babies, anniversaries, and holidays.</p>
+        </div>
+      </div>
 
-      <article class="offer-card">
-        <div class="offer-img"
-             style="background-image:url('images/milestone-memories.png');"></div>
-        <div class="offer-label">Keepsakes & Gifts</div>
-        <p>Meaningful creations perfect for weddings, babies, anniversaries, and holidays.</p>
-      </article>
-
-      <article class="offer-card">
-        <div class="offer-img"
-             style="background-image:url('images/wedding-decor.png');"></div>
-        <div class="offer-label">Event Details</div>
-        <p>Thoughtful touches that make your special occasions unforgettable.</p>
-      </article>
+      <div class="card-item">
+        <div class="card-img" style="background-image:url('images/wedding-decor.png');"></div>
+        <div class="card-bottom">
+          <h3>Event Details</h3>
+          <p>Thoughtful touches that make your special occasions unforgettable.</p>
+        </div>
+      </div>
 
     </div>
-
   </div>
-
 </section>
-
-
-<!-- WHY -->
-<section class="why">
-
-  <div class="wrap why-inner">
-
-    <h2>Why Choose Cina Designs & Events</h2>
-
-    <div class="why-bubble">
-      <p>Handmade with care</p>
-      <p>Personalized for you</p>
-      <p>High-quality materials</p>
-      <p>Family-owned small business</p>
-      <p>Attention to detail</p>
-    </div>
-
-  </div>
-
-</section>
-
 
 <!-- CTA -->
 <section class="cta">
-  <div class="wrap cta-inner">
-
-    <h2>Let’s Create Something Special</h2>
-    <p>Custom designs made with love for every occasion</p>
-
-    <a class="btn btn-pink" href="contact.html">Contact Us</a>
-
-    <div class="cta-footer">
-      <div class="cta-brand">Cina Designs & Events</div>
-      <div class="cta-sub">Handcrafted with<br>love</div>
-    </div>
-
-  </div>
+  <h2>Let’s Create Something Special</h2>
+  <p class="sub">Custom designs made with love for every occasion</p>
+  <a href="contact.html" class="btn">Contact Us</a>
 </section>
 
-</main>
-
-
 <footer class="footer">
-  <div class="wrap footer-inner">
-
-    <div class="foot-left">© 2026 Cina Designs & Events</div>
-
-    <div class="foot-right">
-      <a href="index.html">Home</a>
+  <div class="footer-inner">
+    <div>© 2026 Cina Designs & Events</div>
+    <div>
+      <a href="home.html">Home</a>
       <a href="gallery.html">Gallery</a>
       <a href="contact.html">Contact</a>
     </div>
-
   </div>
 </footer>
 <script src="nav.js"></script>
+
 </body>
 </html>
