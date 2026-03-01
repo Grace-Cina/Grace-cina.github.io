@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Music Time</title>
+
+  <!-- W3CSS for modal -->
+  <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <header class="page-header">
+    <h1>Classes</h1>
+    <h2>Music Time</h2>
+  </header>
+
+  <main class="wrap">
+    <section id="song-gallery" class="gallery"></section>
+  </main>
+
+  <!-- Modal -->
+  <div id="songModal" class="w3-modal">
+    <div class="w3-modal-content modal-card">
+
+      <header class="modal-header">
+        <div>
+          <h3 id="modalTitle">Song Title</h3>
+          <p id="modalArtist" class="modal-sub">by Artist</p>
+        </div>
+        <button class="modal-close" id="closeModal">&times;</button>
+      </header>
+
+      <div class="modal-body">
+        <div class="modal-video">
+          <iframe
+            id="modalYoutube"
+            width="100%"
+            height="315"
+            src=""
+            frameborder="0"
+            allowfullscreen>
+          </iframe>
+          <p id="noVideoMsg" class="no-video">
+            Add a YouTube ID for this song to show the video.
+          </p>
+        </div>
+
+        <div class="modal-info">
+          <p id="modalAlbum" class="info-line">Album:</p>
+          <p id="modalYear" class="info-line">Year:</p>
+          <p id="modalGenre" class="info-line">Genre:</p>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <footer class="footer">@Grace-Cina.com</footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
