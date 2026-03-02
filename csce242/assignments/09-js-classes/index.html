@@ -1,13 +1,14 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
   <title>Music Time</title>
 
-  <!-- W3CSS for modal -->
+  <!-- W3CSS Modal -->
   <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
 
   <link rel="stylesheet" href="styles.css">
 </head>
+
 <body>
 
   <header class="page-header">
@@ -25,8 +26,8 @@
 
       <header class="modal-header">
         <div>
-          <h3 id="modalTitle">Song Title</h3>
-          <p id="modalArtist" class="modal-sub">by Artist</p>
+          <h3 id="modalTitle"></h3>
+          <p id="modalArtist" class="modal-sub"></p>
         </div>
         <button class="modal-close" id="closeModal">&times;</button>
       </header>
@@ -41,15 +42,12 @@
             frameborder="0"
             allowfullscreen>
           </iframe>
-          <p id="noVideoMsg" class="no-video">
-            Add a YouTube ID for this song to show the video.
-          </p>
         </div>
 
         <div class="modal-info">
-          <p id="modalAlbum" class="info-line">Album:</p>
-          <p id="modalYear" class="info-line">Year:</p>
-          <p id="modalGenre" class="info-line">Genre:</p>
+          <p id="modalAlbum"></p>
+          <p id="modalYear"></p>
+          <p id="modalGenre"></p>
         </div>
       </div>
 
@@ -59,5 +57,6 @@
   <footer class="footer">@Grace-Cina.com</footer>
 
   <script src="script.js"></script>
+
 </body>
 </html>
