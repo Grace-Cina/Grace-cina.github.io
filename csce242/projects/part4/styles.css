@@ -192,6 +192,9 @@ h1,h2,h3{
   height:160px;
   background-size:cover;
   background-position:center;
+  background-repeat:no-repeat;
+  background-color:var(--panel);
+  display:block;
 }
 .card-bottom{
   background:rgba(244,194,215,0.65);
