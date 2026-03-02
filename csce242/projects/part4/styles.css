@@ -111,7 +111,7 @@ h1,h2,h3{
   position:absolute;
   inset:0;
   background-size:cover;
-  background-position:center;
+  background-position:center 80%;
   filter: brightness(.88);
   transform: scale(1.02);
 }
