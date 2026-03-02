@@ -522,3 +522,9 @@ h1,h2,h3{
   cursor:pointer;
   line-height: 1;
 }
+@media (max-width: 680px){
+  .card-img.milestones{
+    background-size: 115%;
+    background-position: center;
+  }
+}
