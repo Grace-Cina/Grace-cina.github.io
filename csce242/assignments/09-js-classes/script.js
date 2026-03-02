@@ -30,7 +30,7 @@ const songs = [
     "2023",
     "Folk Pop",
     "images/the-great-divide.webp",
-    "Y4AgCABdZ3Y"
+    "SKs80r2Lp34"
   ),
   new Song(
     "iloveitiloveitiloveit",
@@ -39,7 +39,7 @@ const songs = [
     "2024",
     "Pop",
     "images/iloveit-iloveit-iloveit.webp",
-    "SKs80r2Lp34"
+    "Y4AgCABdZ3Y"
   ),
   new Song(
     "Franklin House",
