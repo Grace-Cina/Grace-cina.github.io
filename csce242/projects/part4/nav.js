@@ -1,6 +1,6 @@
 const toggleNav = () => {
   const nav = document.querySelector(".nav");
-  nav.classList.toggle("open");
+  if (nav) nav.classList.toggle("open");
 };
 
 document.addEventListener("DOMContentLoaded", () => {

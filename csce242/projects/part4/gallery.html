@@ -8,11 +8,9 @@
 <body>
 
 <header class="header">
-  <div class="wrap header-inner">
-
-    <div class="brand">
-      <img class="logo" src="images/designs&events-logo.png" alt="Logo">
-    </div>
+  <div class="header-inner">
+    <img class="logo" src="images/designs&events-logo.png" alt="Cina Designs & Events Logo">
+    <button class="nav-toggle" type="button">Menu</button>
 
     <nav class="nav">
       <a href="index.html">Home</a>
@@ -21,7 +19,6 @@
       <a class="active" href="gallery.html">Gallery</a>
       <a href="contact.html">Contact</a>
     </nav>
-
   </div>
 </header>
 
@@ -110,7 +107,14 @@
     </div>
   </div>
 </footer>
+<!-- LIGHTBOX (Extra JS Feature) -->
+<div id="lightbox" class="lightbox">
+  <button id="lightboxClose" class="lightbox-close" type="button">&times;</button>
+  <img id="lightboxImg" class="lightbox-img" src="" alt="">
+</div>
+
 <script src="nav.js"></script>
+<script src="lightbox.js"></script>
 
 </body>
 </html>
