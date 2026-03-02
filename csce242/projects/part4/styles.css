@@ -191,11 +191,14 @@ h1,h2,h3{
 }
 .card-img{
   height:160px;
-  flex: 0 0 160px;
-  background-size:cover;
-  background-position:center;
-  background-repeat:no-repeat;
+  overflow:hidden;
   background-color: var(--panel);
+}
+.card-img img{
+  width:100%;
+  height:100%;
+  object-fit:cover;
+  display:block;
 }
 .card-bottom{
   background:rgba(244,194,215,0.65);
