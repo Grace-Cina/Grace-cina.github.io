@@ -198,6 +198,7 @@ h1,h2,h3{
   background:rgba(244,194,215,0.65);
   padding:14px 14px 16px;
   text-align:center;
+   margin-top:-1px; 
 }
 .card-bottom h3{
   margin:0;
