@@ -185,14 +185,17 @@ h1,h2,h3{
   border-radius:16px;
   overflow:hidden;
   box-shadow:var(--shadow);
+
+  display:flex;
+  flex-direction:column;
 }
 .card-img{
   height:160px;
+  flex: 0 0 160px;
   background-size:cover;
   background-position:center;
   background-repeat:no-repeat;
-  background-color:var(--panel);
-  display:block;
+  background-color: var(--panel);
 }
 .card-bottom{
   background:rgba(244,194,215,0.65);
