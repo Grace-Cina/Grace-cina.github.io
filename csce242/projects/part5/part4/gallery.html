@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Gallery | Cina Designs &amp; Events</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+
+<header class="header">
+  <div class="header-inner">
+    <img class="logo" src="images/designs&events-logo.png" alt="Cina Designs & Events Logo">
+    <button class="nav-toggle" type="button">Menu</button>
+
+    <nav class="nav">
+      <a href="index.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="shop.html">Shop</a>
+      <a class="active" href="gallery.html">Gallery</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+  </div>
+</header>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-bg" style="background-image:url('images/thread.jpg');"></div>
+
+  <div class="hero-overlay">
+    <div class="card">
+      <h1>Gallery</h1>
+      <p>A collection of custom, handmade designs</p>
+    </div>
+  </div>
+</section>
+
+<!-- FEATURED -->
+<section class="section center" style="background:var(--panel); border-top:1px solid var(--border);">
+  <div class="wrap">
+    <h2>Featured Designs</h2>
+    <p class="sub">A curated look at some of our favorite custom pieces.</p>
+
+    <div class="gallery-grid">
+
+      <!-- REQUIRED: first item clickable -->
+      <a href="product.html">
+        <img src="images/space.jpg" alt="Monthly milestone ornaments">
+      </a>
+
+      <a href="#">
+        <img src="images/ornament.jpg" alt="Wood milestone ornaments">
+      </a>
+
+      <a href="#">
+        <img src="images/recipe.webp" alt="Kitchen measurement cutting board">
+      </a>
+
+      <a href="#">
+        <img src="images/wood.webp" alt="Family name wood sign">
+      </a>
+
+      <a href="#">
+        <img src="images/house-divided.jpg" alt="House divided decor">
+      </a>
+
+      <a href="#">
+        <img src="images/bunny.webp" alt="Wreath sash with bunny">
+      </a>
+
+      <a href="#">
+        <img src="images/hair-brush.jpg" alt="Personalized hair brush">
+      </a>
+
+      <a href="#">
+        <img src="images/flower-holder.jpg" alt="Welcome flower box">
+      </a>
+
+      <a href="#">
+        <img src="images/boo.jpg" alt="Boo sweatshirt">
+      </a>
+
+    </div>
+  </div>
+</section>
+
+<!-- CTA -->
+<section class="cta">
+  <h2>Interested in Something Special?</h2>
+  <p class="sub">We’d love to create something just for you.</p>
+
+  <div class="btn-row">
+    <a class="btn" href="contact.html">Contact Us</a>
+  </div>
+
+  <div style="margin-top:18px; color:var(--heading); font-weight:900;">Cina Designs &amp; Events</div>
+  <div style="font-size:11px;">Handcrafted with<br>love</div>
+</section>
+
+<!-- FOOTER -->
+<footer class="footer">
+  <div class="footer-inner">
+    <div>© 2026 Cina Designs &amp; Events</div>
+    <div>
+      <a href="index.html">Home</a>
+      <a href="gallery.html">Gallery</a>
+      <a href="contact.html">Contact</a>
+    </div>
+  </div>
+</footer>
+<!-- LIGHTBOX (Extra JS Feature) -->
+<div id="lightbox" class="lightbox">
+  <button id="lightboxClose" class="lightbox-close" type="button">&times;</button>
+  <img id="lightboxImg" class="lightbox-img" src="" alt="">
+</div>
+
+<script src="nav.js"></script>
+<script src="lightbox.js"></script>
+
+</body>
+</html>
