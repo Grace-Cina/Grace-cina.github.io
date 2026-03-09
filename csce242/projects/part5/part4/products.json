@@ -1,0 +1,82 @@
+[
+  {
+    "_id": 1,
+    "name": "Personalized Ornament",
+    "img_name": "images/ornament.jpg",
+    "price": "$15.00",
+    "category": "Holiday Decor",
+    "material": "Wood and ribbon",
+    "occasion": "Christmas",
+    "description": "A custom ornament perfect for celebrating special holiday memories."
+  },
+  {
+    "_id": 2,
+    "name": "Custom Wreath Sash",
+    "img_name": "images/wreath-sash.jpg",
+    "price": "$20.00",
+    "category": "Home Decor",
+    "material": "Fabric",
+    "occasion": "Seasonal",
+    "description": "A personalized wreath sash that adds charm to your front door décor."
+  },
+  {
+    "_id": 3,
+    "name": "Monthly Milestone Set",
+    "img_name": "images/starwars-milestone.jpg",
+    "price": "$40.00",
+    "category": "Baby Keepsakes",
+    "material": "Wood",
+    "occasion": "Baby Milestones",
+    "description": "A themed monthly milestone set to capture each month of baby’s first year."
+  },
+  {
+    "_id": 4,
+    "name": "Acrylic Calendar",
+    "img_name": "images/calendar.jpg",
+    "price": "$100.00",
+    "category": "Organization",
+    "material": "Acrylic",
+    "occasion": "Everyday Use",
+    "description": "A reusable acrylic calendar that keeps your schedule stylish and organized."
+  },
+  {
+    "_id": 5,
+    "name": "Wooden Nursery Sign",
+    "img_name": "images/wooden-nursery-sign.jpg",
+    "price": "$85.00",
+    "category": "Nursery Decor",
+    "material": "Wood",
+    "occasion": "Baby Shower",
+    "description": "A custom wooden sign that adds a warm and personal touch to any nursery."
+  },
+  {
+    "_id": 6,
+    "name": "Hand Stitched Sweater",
+    "img_name": "images/sweater.jpg",
+    "price": "$50.00",
+    "category": "Apparel",
+    "material": "Cotton blend",
+    "occasion": "Gift Giving",
+    "description": "A cozy hand stitched sweater customized for a thoughtful and unique gift."
+  },
+  {
+    "_id": 7,
+    "name": "Personalized Cutting Board",
+    "img_name": "images/cutting-boards.jpg",
+    "price": "$40.00",
+    "category": "Kitchen Decor",
+    "material": "Wood",
+    "occasion": "Wedding Gift",
+    "description": "A personalized cutting board that is both practical and beautiful for any kitchen."
+  },
+  {
+    "_id": 8,
+    "name": "First Day Milestone Board",
+    "img_name": "images/first-day.jpg",
+    "price": "$45.00",
+    "category": "School Keepsakes",
+    "material": "Wood and vinyl",
+    "occasion": "Back to School",
+    "description": "A milestone board made to celebrate and remember each first day of school."
+  }
+]

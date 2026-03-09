@@ -43,85 +43,13 @@
     </section>
 
     <!-- PRODUCTS GRID -->
-    <section class="section">
-      <div class="wrap">
-        <div class="grid-4">
+<section class="section">
+  <div class="wrap">
+    <div class="grid-4" id="product-list"></div>
+  </div>
+</section>
 
-          <article class="card-item">
-            <div class="card-img" style="background-image:url('images/ornament.jpg');"></div>
-            <div class="card-bottom">
-              <h3>Personalized Ornament</h3>
-              <div class="price">$15.00</div>
-              <a class="btn mini" href="product.html">View Details</a>
-            </div>
-          </article>
 
-          <article class="card-item">
-            <div class="card-img" style="background-image:url('images/wreath-sash.jpg');"></div>
-            <div class="card-bottom">
-              <h3>Custom Wreath Sash</h3>
-              <div class="price">$20.00</div>
-              <a class="btn mini" href="product.html">View Details</a>
-            </div>
-          </article>
-
-          <article class="card-item">
-            <div class="card-img" style="background-image:url('images/starwars-milestone.jpg');"></div>
-            <div class="card-bottom">
-              <h3>Monthly Milestone Set</h3>
-              <div class="price">$40.00</div>
-              <a class="btn mini" href="product.html">View Details</a>
-            </div>
-          </article>
-
-          <article class="card-item">
-            <div class="card-img" style="background-image:url('images/calendar.jpg');"></div>
-            <div class="card-bottom">
-              <h3>Acrylic Calendar</h3>
-              <div class="price">$100.00</div>
-              <a class="btn mini" href="product.html">View Details</a>
-            </div>
-          </article>
-
-          <article class="card-item">
-            <div class="card-img" style="background-image:url('images/wooden-nursery-sign.jpg');"></div>
-            <div class="card-bottom">
-              <h3>Wooden Nursery Sign</h3>
-              <div class="price">$85.00</div>
-              <a class="btn mini" href="product.html">View Details</a>
-            </div>
-          </article>
-
-          <article class="card-item">
-            <div class="card-img" style="background-image:url('images/sweater.jpg');"></div>
-            <div class="card-bottom">
-              <h3>Hand Stitched Sweater</h3>
-              <div class="price">$50.00</div>
-              <a class="btn mini" href="product.html">View Details</a>
-            </div>
-          </article>
-
-          <article class="card-item">
-            <div class="card-img" style="background-image:url('images/cutting-boards.jpg');"></div>
-            <div class="card-bottom">
-              <h3>Personalized Cutting Board</h3>
-              <div class="price">$40.00</div>
-              <a class="btn mini" href="product.html">View Details</a>
-            </div>
-          </article>
-
-          <article class="card-item">
-            <div class="card-img" style="background-image:url('images/first-day.jpg');"></div>
-            <div class="card-bottom">
-              <h3>First Day Milestone Board</h3>
-              <div class="price">$45.00</div>
-              <a class="btn mini" href="product.html">View Details</a>
-            </div>
-          </article>
-
-        </div>
-      </div>
-    </section>
 
     <!-- CUSTOMIZATION INFO -->
     <section class="section">
@@ -172,5 +100,39 @@
     </div>
   </footer>
   <script src="nav.js"></script>
+  <script>
+const getProducts = async () => {
+  try {
+    const response = await fetch("products.json");
+    const products = await response.json();
+    const container = document.getElementById("product-list");
+
+    products.forEach((product) => {
+      const article = document.createElement("article");
+      article.classList.add("card-item");
+
+      article.innerHTML = `
+        <div class="card-img" style="background-image:url('${product.img_name}');"></div>
+        <div class="card-bottom">
+          <h3>${product.name}</h3>
+          <div class="price">${product.price}</div>
+          <p><strong>Category:</strong> ${product.category}</p>
+          <p><strong>Material:</strong> ${product.material}</p>
+          <p><strong>Occasion:</strong> ${product.occasion}</p>
+          <p>${product.description}</p>
+          <a class="btn mini" href="product.html">View Details</a>
+        </div>
+      `;
+
+      container.appendChild(article);
+    });
+  } catch (error) {
+    console.log("Error loading products:", error);
+  }
+};
+
+getProducts();
+</script>
+
 </body>
 </html>
